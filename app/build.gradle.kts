@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.iamkarim.android.application)
+    alias(libs.plugins.iamkarim.android.hilt)
+    alias(libs.plugins.iamkarim.android.retrofit)
 }
 
 android {

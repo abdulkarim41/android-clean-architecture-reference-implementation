@@ -1,4 +1,4 @@
-package com.abdulkarim
+package com.iamkarim
 
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalog

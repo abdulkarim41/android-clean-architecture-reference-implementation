@@ -1,4 +1,4 @@
-package com.abdulkarim
+package com.iamkarim
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.JavaVersion

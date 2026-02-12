@@ -1,6 +1,6 @@
 
-import com.abdulkarim.configureKotlinAndroid
-import com.abdulkarim.libs
+import com.iamkarim.configureKotlinAndroid
+import com.iamkarim.libs
 import com.android.build.api.dsl.ApplicationExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project

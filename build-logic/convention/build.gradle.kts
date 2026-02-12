@@ -24,5 +24,14 @@ gradlePlugin {
             id = "iamkarim.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
+        register("androidHiltConvention") {
+            id = "iamkarim.anroid.hilt"
+            implementationClass = "AndroidHiltConventionPlugin"
+        }
+
+        register("androidRetrofitConvention") {
+            id = "iamkarim.anroid.retrofit"
+            implementationClass = "AndroidRetrofitConventionPlugin"
+        }
     }
 }

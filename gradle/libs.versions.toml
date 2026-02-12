@@ -12,6 +12,13 @@ constraintlayout = "2.2.1"
 desugar = "2.1.5"
 compileSdk = "36"
 minSdk = "24"
+retrofit2 = "3.0.0"
+okhHttp3 = "5.3.2"
+gson = "2.13.2"
+hilt = "2.59.1"
+ksp = "2.3.2"
+timber = "5.0.1"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -22,8 +29,20 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+log-timber = {group = "com.jakewharton.timber", name = "timber", version.ref="timber"}
 
 desugar = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugar" }
+
+
+hilt-android = {group = "com.google.dagger", name = "hilt-android", version.ref="hilt"}
+hilt-compiler = {group = "com.google.dagger", name = "hilt-android-compiler", version.ref="hilt"}
+
+retrofit2-core = {group = "com.squareup.retrofit2", name = "retrofit", version.ref="retrofit2"}
+retrofit2-rx3adapter = {group = "com.squareup.retrofit2", name = "adapter-rxjava3", version.ref="retrofit2"}
+retrofit2-gsonconverter = {group = "com.squareup.retrofit2", name = "converter-gson", version.ref="retrofit2"}
+gson = {group = "com.google.code.gson", name = "gson", version.ref="gson"}
+okhHttp3-core = {group = "com.squareup.okhttp3", name = "okhttp", version.ref="okhHttp3"}
+okhHttp3-interceptor = {group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref="okhHttp3"}
 
 # dependency for build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -32,10 +51,15 @@ kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-pl
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+com-google-dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+com-google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 # Plugins defined by this project
 iamkarim-android-application = { id = "iamkarim.android.application", version = "unspecified" }
 iamkarim-android-library = { id = "iamkarim.android.library", version = "unspecified" }
 iamkarim-jvm-library = { id = "iamkarim.jvm.library", version = "unspecified" }
+iamkarim-android-hilt = { id = "iamkarim.anroid.hilt", version = "unspecified" }
+iamkarim-android-retrofit = { id = "iamkarim.anroid.retrofit", version = "unspecified" }
 
 

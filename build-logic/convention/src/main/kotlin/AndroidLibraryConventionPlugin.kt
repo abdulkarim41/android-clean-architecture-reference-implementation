@@ -1,7 +1,7 @@
 
 import com.android.build.api.dsl.LibraryExtension
-import com.abdulkarim.configureKotlinAndroid
-import com.abdulkarim.libs
+import com.iamkarim.configureKotlinAndroid
+import com.iamkarim.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
