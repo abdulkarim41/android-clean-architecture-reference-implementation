@@ -9,6 +9,7 @@ appcompat = "1.7.1"
 material = "1.13.0"
 activity = "1.12.3"
 constraintlayout = "2.2.1"
+kotlinxCoroutines = "1.10.2"
 desugar = "2.1.5"
 compileSdk = "36"
 minSdk = "24"
@@ -41,6 +42,7 @@ retrofit2-core = {group = "com.squareup.retrofit2", name = "retrofit", version.r
 retrofit2-rx3adapter = {group = "com.squareup.retrofit2", name = "adapter-rxjava3", version.ref="retrofit2"}
 retrofit2-gsonconverter = {group = "com.squareup.retrofit2", name = "converter-gson", version.ref="retrofit2"}
 gson = {group = "com.google.code.gson", name = "gson", version.ref="gson"}
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
 okhHttp3-core = {group = "com.squareup.okhttp3", name = "okhttp", version.ref="okhHttp3"}
 okhHttp3-interceptor = {group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref="okhHttp3"}
 

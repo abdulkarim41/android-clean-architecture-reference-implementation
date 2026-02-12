@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.iamkarim.android.library)
+    alias(libs.plugins.iamkarim.android.hilt)
+    alias(libs.plugins.iamkarim.android.retrofit)
 }
 
 android {
@@ -7,10 +9,10 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(projects.core.di)
+    implementation(projects.core.domain)
+    implementation(projects.core.model.entity)
+    implementation(projects.core.model.apiresponse)
+    implementation(projects.common)
 }

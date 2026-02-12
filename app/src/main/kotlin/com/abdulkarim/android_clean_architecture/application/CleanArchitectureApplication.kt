@@ -1,4 +1,4 @@
-package com.abdulkarim.android_clean_architecture
+package com.abdulkarim.android_clean_architecture.application
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
