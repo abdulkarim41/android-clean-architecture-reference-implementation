@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.abdulkarim.android.application)
+    alias(libs.plugins.iamkarim.android.application)
 }
 
 android {
@@ -26,10 +26,6 @@ android {
                 "proguard-rules.pro"
             )
         }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
     }
 }
 

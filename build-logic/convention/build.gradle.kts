@@ -11,13 +11,18 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplicationConvention") {
-            id = "abdulkarim.android.application"
+            id = "iamkarim.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
 
         register("androidLibraryConvention") {
-            id = "abdulkarim.android.library"
+            id = "iamkarim.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
+        }
+
+        register("jvmLibraryConvention") {
+            id = "iamkarim.jvm.library"
+            implementationClass = "JvmLibraryConventionPlugin"
         }
     }
 }
