@@ -25,3 +25,6 @@ rootProject.name = "android-clean-architecture-reference-implementation"
 include(":app")
 include(":core:design-system")
 include(":core:ui")
+include(":core:data")
+include(":core:model:apiresponse")
+include(":core:model:entity")
