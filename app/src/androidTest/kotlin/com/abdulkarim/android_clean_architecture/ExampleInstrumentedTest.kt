@@ -1,4 +1,4 @@
-package com.abdulkarim.android_clean_architecture_reference_implementation
+package com.abdulkarim.android_clean_architecture
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

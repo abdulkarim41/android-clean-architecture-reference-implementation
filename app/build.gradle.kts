@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.abdulkarim.android_clean_architecture_reference_implementation"
+    namespace = "com.abdulkarim.android_clean_architecture"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.abdulkarim.android_clean_architecture_reference_implementation"
+        applicationId = "com.abdulkarim.clean_architecture"
         minSdk = 27
         targetSdk = 36
         versionCode = 1

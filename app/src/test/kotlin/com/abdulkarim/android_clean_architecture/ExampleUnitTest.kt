@@ -1,4 +1,4 @@
-package com.abdulkarim.android_clean_architecture_reference_implementation
+package com.abdulkarim.android_clean_architecture
 
 import org.junit.Test
 
