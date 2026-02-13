@@ -2,6 +2,7 @@ package com.abdulkarim.data.wrapper
 
 import com.google.gson.JsonParser
 import kotlinx.coroutines.CoroutineDispatcher
+import com.abdulkarim.common.base.Result
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -12,7 +13,6 @@ import retrofit2.Response
 import java.io.IOException
 import java.net.SocketTimeoutException
 import javax.inject.Inject
-import com.abdulkarim.common.base.Result
 
 class NetworkBoundResource @Inject constructor(){
 

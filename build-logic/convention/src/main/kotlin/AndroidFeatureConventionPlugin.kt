@@ -5,7 +5,6 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
-import org.gradle.kotlin.dsl.kotlin
 import kotlin.apply
 
 class AndroidFeatureConventionPlugin : Plugin<Project> {
@@ -13,6 +12,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
         with(target) {
             pluginManager.apply {
                 apply("iamkarim.android.library")
+                apply("iamkarim.android.navigation")
                 apply("iamkarim.android.hilt")
             }
             extensions.configure<LibraryExtension> {

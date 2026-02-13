@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.iamkarim.android.application)
     alias(libs.plugins.iamkarim.android.hilt)
     alias(libs.plugins.iamkarim.android.retrofit)
+    alias(libs.plugins.iamkarim.android.navigation)
 }
 
 android {
@@ -28,6 +29,10 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 

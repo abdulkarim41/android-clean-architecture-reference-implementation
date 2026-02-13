@@ -38,5 +38,10 @@ gradlePlugin {
             id = "iamkarim.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
+
+        register("androidNavigationComponentConvention") {
+            id = "iamkarim.android.navigation"
+            implementationClass = "AndroidNavigationComponentConventionPlugin"
+        }
     }
 }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="deep_link_post_list_fragment">app://com.abdulkarim/postList</string>
+
+</resources>
