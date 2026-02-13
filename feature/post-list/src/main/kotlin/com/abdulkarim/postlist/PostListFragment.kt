@@ -35,13 +35,19 @@ class PostListFragment : BaseFragment<FragmentPostListBinding>() {
     private fun handleUiState(state: PostListUiState<Any>) {
         when (state) {
             is PostListUiState.Loading -> {
-                binding.progressbar.isVisible = state.isLoading
+                binding.viewState.showLoading()
             }
             is PostListUiState.PostList -> {
+                binding.viewState.showSuccess()
                 adapter.submitList(state.data)
             }
             is PostListUiState.ApiError -> {
-                // show error message
+                binding.viewState.showError(
+                    message = state.message,
+                    retryAction = {
+                        viewModel.action(PostListUiAction.FetchPostListApi)
+                    }
+                )
             }
         }
     }

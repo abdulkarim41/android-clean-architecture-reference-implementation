@@ -4,6 +4,10 @@ plugins {
 
 android {
     namespace = "com.abdulkarim.ui"
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
