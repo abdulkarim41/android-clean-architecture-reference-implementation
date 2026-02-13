@@ -7,7 +7,11 @@ junitVersion = "1.3.0"
 espressoCore = "3.7.0"
 appcompat = "1.7.1"
 material = "1.13.0"
-activity = "1.12.3"
+activity = "1.12.4"
+fragment = "1.8.9"
+recyclerview = "1.4.0"
+cardview = "1.0.0"
+lifecycle = "2.10.0"
 constraintlayout = "2.2.1"
 kotlinxCoroutines = "1.10.2"
 desugar = "2.1.5"
@@ -27,9 +31,17 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-fragment = {group = "androidx.fragment", name = "fragment-ktx", version.ref="fragment"}
+androidx-cardview = {group = "androidx.cardview", name = "cardview", version.ref="cardview"}
+androidx-recyclerview = {group = "androidx.recyclerview", name = "recyclerview", version.ref="recyclerview"}
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-lifecycle-viewmodel-ktx = {group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref="lifecycle"}
+androidx-lifecycle-viewmodel-savedstate = {group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref="lifecycle"}
+androidx-lifecycle-livedata = {group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref="lifecycle"}
+androidx-lifecycle-runtime = {group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref="lifecycle"}
+androidx-lifecycle-service = {group = "androidx.lifecycle", name = "lifecycle-service", version.ref="lifecycle"}
 log-timber = {group = "com.jakewharton.timber", name = "timber", version.ref="timber"}
 
 desugar = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugar" }
@@ -61,7 +73,8 @@ com-google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" 
 iamkarim-android-application = { id = "iamkarim.android.application", version = "unspecified" }
 iamkarim-android-library = { id = "iamkarim.android.library", version = "unspecified" }
 iamkarim-jvm-library = { id = "iamkarim.jvm.library", version = "unspecified" }
-iamkarim-android-hilt = { id = "iamkarim.anroid.hilt", version = "unspecified" }
-iamkarim-android-retrofit = { id = "iamkarim.anroid.retrofit", version = "unspecified" }
+iamkarim-android-hilt = { id = "iamkarim.android.hilt", version = "unspecified" }
+iamkarim-android-retrofit = { id = "iamkarim.android.retrofit", version = "unspecified" }
+iamkarim-android-feature = { id = "iamkarim.android.feature", version = "unspecified" }
 
 
