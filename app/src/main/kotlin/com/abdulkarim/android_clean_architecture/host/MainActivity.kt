@@ -1,10 +1,11 @@
-package com.abdulkarim.android_clean_architecture
+package com.abdulkarim.android_clean_architecture.host
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.abdulkarim.android_clean_architecture.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
