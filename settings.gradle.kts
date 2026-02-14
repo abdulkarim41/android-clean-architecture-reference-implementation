@@ -1,4 +1,3 @@
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 pluginManagement {
     includeBuild("build-logic")
     repositories {
@@ -22,6 +21,8 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "android-clean-architecture-reference-implementation"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 include(":app")
 include(":core:design-system")
 include(":core:ui")
