@@ -15,10 +15,10 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
 
             extensions.configure<ApplicationExtension> {
                 configureKotlinAndroid(this)
-                compileSdk = libs.findVersion("compileSdk").get().toString().toInt()
-                defaultConfig {
-                    minSdk = libs.findVersion("minSdk").get().toString().toInt()
-                }
+//                compileSdk = libs.findVersion("compileSdk").get().toString().toInt()
+//                defaultConfig {
+//                    minSdk = libs.findVersion("minSdk").get().toString().toInt()
+//                }
             }
         }
     }

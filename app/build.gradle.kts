@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.iamkarim.android.application)
+    alias(libs.plugins.iamkarim.android.application.flavors)
     alias(libs.plugins.iamkarim.android.hilt)
     alias(libs.plugins.iamkarim.android.retrofit)
     alias(libs.plugins.iamkarim.android.navigation)
@@ -7,14 +8,9 @@ plugins {
 
 android {
     namespace = "com.abdulkarim.android_clean_architecture"
-    compileSdk {
-        version = release(36)
-    }
 
     defaultConfig {
         applicationId = "com.abdulkarim.clean_architecture"
-        minSdk = 27
-        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
