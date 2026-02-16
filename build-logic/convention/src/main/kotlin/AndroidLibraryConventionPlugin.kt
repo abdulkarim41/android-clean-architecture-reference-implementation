@@ -1,5 +1,6 @@
 
 import com.android.build.api.dsl.LibraryExtension
+import com.iamkarim.configureFlavors
 import com.iamkarim.configureKotlinAndroid
 import com.iamkarim.libs
 import org.gradle.api.Plugin
@@ -17,6 +18,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
 
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)
+                configureFlavors(this)
             }
 
             dependencies {

@@ -1,7 +1,7 @@
 
 import com.iamkarim.configureKotlinAndroid
-import com.iamkarim.libs
 import com.android.build.api.dsl.ApplicationExtension
+import com.iamkarim.configureFlavors
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -15,10 +15,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
 
             extensions.configure<ApplicationExtension> {
                 configureKotlinAndroid(this)
-//                compileSdk = libs.findVersion("compileSdk").get().toString().toInt()
-//                defaultConfig {
-//                    minSdk = libs.findVersion("minSdk").get().toString().toInt()
-//                }
+                configureFlavors(this)
             }
         }
     }

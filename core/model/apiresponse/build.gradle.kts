@@ -1,7 +1,3 @@
 plugins {
-    alias(libs.plugins.iamkarim.android.library)
-}
-
-android {
-    namespace = "com.abdulkarim.apiresponse"
+    alias(libs.plugins.iamkarim.jvm.library)
 }

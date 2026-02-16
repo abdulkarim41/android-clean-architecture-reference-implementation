@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.iamkarim.android.application)
-    alias(libs.plugins.iamkarim.android.application.flavors)
     alias(libs.plugins.iamkarim.android.hilt)
     alias(libs.plugins.iamkarim.android.retrofit)
     alias(libs.plugins.iamkarim.android.navigation)
@@ -18,12 +17,17 @@ android {
     }
 
     buildTypes {
-        release {
-            isMinifyEnabled = false
+        getByName("debug"){
+
+        }
+        getByName("release") {
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
         }
     }
 

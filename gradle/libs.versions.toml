@@ -79,7 +79,6 @@ androidx-navigation-safeargs = { id = "androidx.navigation.safeargs", version.re
 
 # Plugins defined by this project
 iamkarim-android-application = { id = "iamkarim.android.application", version = "unspecified" }
-iamkarim-android-application-flavors = { id = "iamkarim.android.application.flavors", version = "unspecified" }
 iamkarim-android-library = { id = "iamkarim.android.library", version = "unspecified" }
 iamkarim-jvm-library = { id = "iamkarim.jvm.library", version = "unspecified" }
 iamkarim-android-hilt = { id = "iamkarim.android.hilt", version = "unspecified" }
