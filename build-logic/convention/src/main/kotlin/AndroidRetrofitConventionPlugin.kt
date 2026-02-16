@@ -19,7 +19,7 @@ class AndroidRetrofitConventionPlugin : Plugin<Project> {
                 )
                 add(
                     "implementation",
-                    libs.findLibrary("retrofit2.gsonconverter").get()
+                    libs.findLibrary("retrofit2.gson.converter").get()
                 )
                 add("implementation", libs.findLibrary("gson").get())
                 add(

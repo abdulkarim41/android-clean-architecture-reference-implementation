@@ -1,5 +1,5 @@
 [versions]
-agp = "9.0.0"
+agp = "9.0.1"
 kotlin = "2.3.10"
 coreKtx = "1.17.0"
 junit = "4.13.2"
@@ -55,7 +55,7 @@ hilt-compiler = {group = "com.google.dagger", name = "hilt-android-compiler", ve
 
 retrofit2-core = {group = "com.squareup.retrofit2", name = "retrofit", version.ref="retrofit2"}
 retrofit2-rx3adapter = {group = "com.squareup.retrofit2", name = "adapter-rxjava3", version.ref="retrofit2"}
-retrofit2-gsonconverter = {group = "com.squareup.retrofit2", name = "converter-gson", version.ref="retrofit2"}
+retrofit2-gson-converter = {group = "com.squareup.retrofit2", name = "converter-gson", version.ref="retrofit2"}
 gson = {group = "com.google.code.gson", name = "gson", version.ref="gson"}
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
 okhHttp3-core = {group = "com.squareup.okhttp3", name = "okhttp", version.ref="okhHttp3"}
