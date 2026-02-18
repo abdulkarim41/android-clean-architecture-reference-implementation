@@ -9,10 +9,7 @@ import org.gradle.kotlin.dsl.configure
 class AndroidApplicationConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            with(pluginManager) {
-                apply("com.android.application")
-            }
-
+            pluginManager.apply("com.android.application")
             extensions.configure<ApplicationExtension> {
                 configureKotlinAndroid(this)
                 configureFlavors(this)

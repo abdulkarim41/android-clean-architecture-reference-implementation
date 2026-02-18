@@ -23,7 +23,7 @@ retrofit2 = "3.0.0"
 okhHttp3 = "5.3.2"
 gson = "2.13.2"
 hilt = "2.59.1"
-ksp = "2.3.2"
+ksp = "2.3.4"
 timber = "5.0.1"
 
 

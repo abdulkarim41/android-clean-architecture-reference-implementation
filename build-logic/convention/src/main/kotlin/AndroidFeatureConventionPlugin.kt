@@ -20,12 +20,6 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
                 }
 
-                sourceSets {
-                    getByName("main") {
-                        java.srcDir("src/main/kotlin")
-                    }
-                }
-
                 buildFeatures {
                     viewBinding = true
                 }

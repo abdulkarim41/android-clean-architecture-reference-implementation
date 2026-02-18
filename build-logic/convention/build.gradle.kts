@@ -33,11 +33,6 @@ gradlePlugin {
             implementationClass = "AndroidApplicationConventionPlugin"
         }
 
-        register("androidApplicationFlavorsConvention") {
-            id = "iamkarim.android.application.flavors"
-            implementationClass = "AndroidApplicationFlavorsConventionPlugin"
-        }
-
         register("androidLibraryConvention") {
             id = "iamkarim.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
@@ -47,6 +42,7 @@ gradlePlugin {
             id = "iamkarim.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
+
         register("androidHiltConvention") {
             id = "iamkarim.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
