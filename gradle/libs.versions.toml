@@ -26,6 +26,7 @@ hilt = "2.59.1"
 ksp = "2.3.4"
 gms = "4.4.4"
 firebase = "34.9.0"
+room = "2.8.4"
 firebasecrashlyticsplugin = "3.0.6"
 timber = "5.0.1"
 
@@ -73,6 +74,11 @@ firebase-messaging = {group = "com.google.firebase", name = "firebase-messaging"
 firebase-analytics = {group = "com.google.firebase", name = "firebase-analytics"}
 firebase-crashlytics = {group = "com.google.firebase", name = "firebase-crashlytics"}
 
+room-ktx = {group = "androidx.room", name = "room-ktx", version.ref="room"}
+room-runtime = {group = "androidx.room", name = "room-runtime", version.ref="room"}
+room-compiler = {group = "androidx.room", name = "room-compiler", version.ref="room"}
+room-common = {group = "androidx.room", name = "room-common", version.ref="room"}
+
 # dependency for build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -98,5 +104,6 @@ iamkarim-android-retrofit = { id = "iamkarim.android.retrofit", version = "unspe
 iamkarim-android-feature = { id = "iamkarim.android.feature", version = "unspecified" }
 iamkarim-android-navigation = { id = "iamkarim.android.navigation", version = "unspecified" }
 iamkarim-android-firebase = { id = "iamkarim.android.firebase", version = "unspecified" }
+iamkarim-android-room = { id = "iamkarim.android.room", version = "unspecified" }
 
 
