@@ -23,6 +23,7 @@ dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.ksp.gradlePlugin)
+    compileOnly(libs.firebase.crashlytics.gradlePlugin)
 
 }
 
@@ -61,6 +62,11 @@ gradlePlugin {
         register("androidNavigationComponentConvention") {
             id = "iamkarim.android.navigation"
             implementationClass = "AndroidNavigationComponentConventionPlugin"
+        }
+
+        register("androidApplicationFirebaseConvention") {
+            id = "iamkarim.android.firebase"
+            implementationClass = "AndroidApplicationFirebaseConventionPlugin"
         }
     }
 }

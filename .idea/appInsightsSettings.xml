@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.abdulkarim.clean_architecture" />
+                  <option name="mobileSdkAppId" value="1:971547857668:android:be04e2ea5b573885e23651" />
+                  <option name="projectId" value="deeplink-test-243e9" />
+                  <option name="projectNumber" value="971547857668" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

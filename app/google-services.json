@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "ProjectId",
+    "project_id": "123",
+    "storage_bucket": "123"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "App Id",
+        "android_client_info": {
+          "package_name": "com.abdulkarim.clean_architecture"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8cjpy26dUiUVg2NbDUUwrYi-zvfK2hKUkdkfjkd"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

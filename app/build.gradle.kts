@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.iamkarim.android.hilt)
     alias(libs.plugins.iamkarim.android.retrofit)
     alias(libs.plugins.iamkarim.android.navigation)
+    alias(libs.plugins.iamkarim.android.firebase)
 }
 
 android {
