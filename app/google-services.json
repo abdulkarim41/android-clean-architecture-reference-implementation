@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "ProjectId",
-    "project_id": "123",
-    "storage_bucket": "123"
+    "project_number": "App Id",
+    "project_id": "Project Id",
+    "storage_bucket": "Bucket Id"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "App Id",
+        "mobilesdk_app_id": "1:9715478576644448:android:be04e2ea5b573885e23651121212",
         "android_client_info": {
           "package_name": "com.abdulkarim.clean_architecture"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC8cjpy26dUiUVg2NbDUUwrYi-zvfK2hKUkdkfjkd"
+          "current_key": "AIzawSyC8cjpytY26dUiUVg2NbDUUwrYi-zvfK2hKUhjhj"
         }
       ],
       "services": {

@@ -13,6 +13,8 @@ dependencies {
     implementation(projects.core.di)
     implementation(projects.core.domain)
     implementation(projects.core.model.entity)
+    implementation(projects.core.cache)
     implementation(projects.core.model.apiresponse)
     implementation(projects.common)
+
 }

@@ -1,6 +1,8 @@
 package com.abdulkarim.android_clean_architecture.di
 
+import com.abdulkarim.data.repoimpl.NotificationRepoImpl
 import com.abdulkarim.data.repoimpl.RepositoryImpl
+import com.abdulkarim.domain.repository.NotificationRepository
 import com.abdulkarim.domain.repository.Repository
 import dagger.Binds
 import dagger.Module
@@ -13,5 +15,8 @@ interface RepositoryModule {
 
     @Binds
     fun bindRepository(repositoryImpl: RepositoryImpl): Repository
+
+    @Binds
+    fun bindNotificationRepository(repositoryImpl: NotificationRepoImpl): NotificationRepository
 
 }
