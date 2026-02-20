@@ -32,7 +32,11 @@ class NotificationService : FirebaseMessagingService() {
             return
         }
 
+        Timber.d("notification receive remote : $remoteMessage")
+        Timber.d("notification receive : $data")
+
         serviceScope.launch {
+            Timber.d("notification : $data")
             insertNotificationToDB(data)
         }
 

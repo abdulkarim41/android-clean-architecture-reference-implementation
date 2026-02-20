@@ -1,4 +1,4 @@
-package com.abdulkarim.android_clean_architecture.di
+package com.abdulkarim.android_clean_architecture
 
 import com.abdulkarim.di.qualifer.AppBaseUrl
 import dagger.Module
