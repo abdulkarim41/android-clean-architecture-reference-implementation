@@ -52,6 +52,7 @@ dependencies {
     implementation(projects.core.model.entity)
 
     implementation(projects.feature.postList)
+    implementation(projects.feature.notification)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

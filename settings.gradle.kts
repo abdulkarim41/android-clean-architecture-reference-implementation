@@ -35,3 +35,4 @@ include(":common")
 include(":core:di")
 include(":feature:post-list")
 
+include(":feature:notification")
