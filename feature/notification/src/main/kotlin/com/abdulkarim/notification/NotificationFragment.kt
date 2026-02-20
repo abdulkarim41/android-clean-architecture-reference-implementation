@@ -20,8 +20,6 @@ class NotificationFragment : BaseFragment<FragmentNotificationBinding>() {
 
         viewModel.uiState bindTo :: handleUiState
 
-        binding.toolBarInc.toolbarTitleTV.text = "All Notification"
-
         adapter = NotificationAdapter()
         requireActivity().setUpVerticalRecyclerView(binding.notificationListRv, adapter)
         adapterDataObserver()

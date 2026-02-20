@@ -13,7 +13,7 @@
         android:name=".application.CleanArchitectureApplication"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Androidcleanarchitecturereferenceimplementation">
+        android:theme="@style/AppTheme">
 
         <service
             android:name=".service.NotificationService"
