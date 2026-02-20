@@ -1,5 +1,8 @@
 <resources>
-    <string name="message_hello_world">Hello World!</string>
+
+    <string name="label_posts">Posts</string>
+    <string name="label_notification">Notification</string>
+
     <string name="message_image_content_description">image_content_description</string>
 
 </resources>
