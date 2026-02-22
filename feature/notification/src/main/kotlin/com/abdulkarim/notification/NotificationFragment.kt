@@ -2,11 +2,13 @@ package com.abdulkarim.notification
 
 import android.os.Bundle
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.abdulkarim.common.base.BaseFragment
 import com.abdulkarim.notification.databinding.FragmentNotificationBinding
 import com.abdulkarim.ui.extfun.setUpVerticalRecyclerView
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
 @AndroidEntryPoint
 class NotificationFragment : BaseFragment<FragmentNotificationBinding>() {
@@ -22,6 +24,17 @@ class NotificationFragment : BaseFragment<FragmentNotificationBinding>() {
 
         adapter = NotificationAdapter()
         requireActivity().setUpVerticalRecyclerView(binding.notificationListRv, adapter)
+
+        ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or (ItemTouchHelper.RIGHT)){
+            override fun onMove(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean = false
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+
+                val notificationId = adapter.getNotificationEntity(viewHolder.absoluteAdapterPosition).id
+
+            }
+
+        }).attachToRecyclerView(binding.notificationListRv)
+
         adapterDataObserver()
 
     }
