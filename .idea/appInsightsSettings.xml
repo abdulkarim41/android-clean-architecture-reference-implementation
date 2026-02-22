@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.abdulkarim.clean_architecture.dev" />
-                  <option name="mobileSdkAppId" value="1:971547857668:android:6fada4b8aae9d3c3e23651" />
-                  <option name="projectId" value="deeplink-test-243e9" />
-                  <option name="projectNumber" value="971547857668" />
+                  <option name="mobileSdkAppId" value="1:971547668:android:6fassda4b8aae9d3c3e236512121" />
+                  <option name="projectId" value="1234" />
+                  <option name="projectNumber" value="project id" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

@@ -11,24 +11,24 @@ class AndroidRetrofitConventionPlugin : Plugin<Project> {
             dependencies {
                 add(
                     "implementation",
-                    libs.findLibrary("retrofit2.core").get()
+                    libs.findLibrary("retrofit.core").get()
                 )
                 add(
                     "implementation",
-                    libs.findLibrary("retrofit2.rx3adapter").get()
+                    libs.findLibrary("retrofit.adapter.rx3").get()
                 )
                 add(
                     "implementation",
-                    libs.findLibrary("retrofit2.gson.converter").get()
+                    libs.findLibrary("retrofit.converter.gson").get()
                 )
                 add("implementation", libs.findLibrary("gson").get())
                 add(
                     "implementation",
-                    libs.findLibrary("okhHttp3.core").get()
+                    libs.findLibrary("okhHttp.core").get()
                 )
                 add(
                     "implementation",
-                    libs.findLibrary("okhHttp3.interceptor").get()
+                    libs.findLibrary("okhHttp.logging.interceptor").get()
                 )
             }
         }

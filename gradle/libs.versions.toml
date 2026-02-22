@@ -1,89 +1,142 @@
 [versions]
+
+# SDK
+compile-sdk = "36"
+min-sdk = "26"
+
+# Gradle / Kotlin
 agp = "9.0.1"
 kotlin = "2.3.10"
-coreKtx = "1.17.0"
-junit = "4.13.2"
+ksp = "2.3.4"
+
+# AndroidX
+androidx-core = "1.17.0"
+androidx-appcompat = "1.7.1"
+androidx-activity = "1.12.4"
+androidx-fragment = "1.8.9"
+androidx-lifecycle = "2.10.0"
+androidx-navigation = "2.9.7"
+androidx-navigation-hilt = "1.3.0"
+androidx-recyclerview = "1.4.0"
+androidx-cardview = "1.0.0"
+androidx-constraintlayout = "2.2.1"
+
+# Network
+retrofit = "3.0.0"
+okhttp = "5.3.2"
+gson = "2.13.2"
+
+# DI
+hilt = "2.59.2"
+
+# Room
+room = "2.8.4"
+
+# Firebase
+firebase-bom = "34.9.0"
+firebase-crashlytics-plugin = "3.0.6"
+google-services = "4.4.4"
+
+# Testing
+junit4 = "4.13.2"
+androidx-junit = "1.3.0"
+espresso = "3.7.0"
+
+#junit = "4.13.2"
 junitVersion = "1.3.0"
-espressoCore = "3.7.0"
-appcompat = "1.7.1"
+#espressoCore = "3.7.0"
+#appcompat = "1.7.1"
 material = "1.13.0"
-activity = "1.12.4"
-fragment = "1.8.9"
-recyclerview = "1.4.0"
-cardview = "1.0.0"
-lifecycle = "2.10.0"
-constraintlayout = "2.2.1"
+#activity = "1.12.4"
+#fragment = "1.8.9"
+#recyclerview = "1.4.0"
+#cardview = "1.0.0"
+#lifecycle = "2.10.0"
+#constraintlayout = "2.2.1"
 kotlinxCoroutines = "1.10.2"
-navigationComponent = "2.9.7"
-navigationComponentHilt = "1.3.0"
+#navigationComponent = "2.9.7"
+#navigationComponentHilt = "1.3.0"
 desugar = "2.1.5"
-compileSdk = "36"
-minSdk = "26"
+#compileSdk = "36"
+#minSdk = "26"
 retrofit2 = "3.0.0"
 okhHttp3 = "5.3.2"
-gson = "2.13.2"
-hilt = "2.59.1"
-ksp = "2.3.4"
-gms = "4.4.4"
+#gson = "2.13.2"
+#hilt = "2.59.2"
+
+#gms = "4.4.4"
 firebase = "34.9.0"
-room = "2.8.4"
-firebasecrashlyticsplugin = "3.0.6"
+#room = "2.8.4"
+#firebasecrashlyticsplugin = "3.0.6"
 timber = "5.0.1"
 
 
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+# ---------- AndroidX Core ----------
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "androidx-activity" }
+androidx-fragment = {group = "androidx.fragment", name = "fragment-ktx", version.ref="androidx-fragment"}
+androidx-recyclerview = {group = "androidx.recyclerview", name = "recyclerview", version.ref="androidx-recyclerview"}
+androidx-cardview = {group = "androidx.cardview", name = "cardview", version.ref="androidx-cardview"}
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
+
+# ---------- Lifecycle ----------
+androidx-lifecycle-viewmodel-ktx = {group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref="androidx-lifecycle"}
+androidx-lifecycle-viewmodel-savedstate = {group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref="androidx-lifecycle"}
+androidx-lifecycle-livedata = {group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref="androidx-lifecycle"}
+androidx-lifecycle-runtime = {group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref="androidx-lifecycle"}
+androidx-lifecycle-service = {group = "androidx.lifecycle", name = "lifecycle-service", version.ref="androidx-lifecycle"}
+
+# ---------- Navigation ----------
+androidx-navigation-ktx = {group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref="androidx-navigation"}
+androidx-navigation-ui = {group = "androidx.navigation", name = "navigation-ui-ktx", version.ref="androidx-navigation"}
+androidx-navigation-hilt = {group = "androidx.hilt", name = "hilt-navigation-fragment", version.ref="androidx-navigation-hilt"}
+
+# ---------- Material ----------
 androidx-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
-androidx-fragment = {group = "androidx.fragment", name = "fragment-ktx", version.ref="fragment"}
-androidx-cardview = {group = "androidx.cardview", name = "cardview", version.ref="cardview"}
-androidx-recyclerview = {group = "androidx.recyclerview", name = "recyclerview", version.ref="recyclerview"}
-androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
-androidx-lifecycle-viewmodel-ktx = {group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref="lifecycle"}
-androidx-lifecycle-viewmodel-savedstate = {group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref="lifecycle"}
-androidx-lifecycle-livedata = {group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref="lifecycle"}
-androidx-lifecycle-runtime = {group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref="lifecycle"}
-androidx-lifecycle-service = {group = "androidx.lifecycle", name = "lifecycle-service", version.ref="lifecycle"}
-log-timber = {group = "com.jakewharton.timber", name = "timber", version.ref="timber"}
 
-desugar = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugar" }
+# ---------- Network ----------
+retrofit-core = {group = "com.squareup.retrofit2", name = "retrofit", version.ref="retrofit"}
+retrofit-adapter-rx3 = {group = "com.squareup.retrofit2", name = "adapter-rxjava3", version.ref="retrofit"}
+retrofit-converter-gson = {group = "com.squareup.retrofit2", name = "converter-gson", version.ref="retrofit"}
+okhHttp-core = {group = "com.squareup.okhttp3", name = "okhttp", version.ref="okhttp"}
+okhHttp-logging-interceptor = {group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref="okhttp"}
+gson = {group = "com.google.code.gson", name = "gson", version.ref="gson"}
 
-
+# ---------- DI ----------
 hilt-android = {group = "com.google.dagger", name = "hilt-android", version.ref="hilt"}
 hilt-compiler = {group = "com.google.dagger", name = "hilt-android-compiler", version.ref="hilt"}
 
-retrofit2-core = {group = "com.squareup.retrofit2", name = "retrofit", version.ref="retrofit2"}
-retrofit2-rx3adapter = {group = "com.squareup.retrofit2", name = "adapter-rxjava3", version.ref="retrofit2"}
-retrofit2-gson-converter = {group = "com.squareup.retrofit2", name = "converter-gson", version.ref="retrofit2"}
-gson = {group = "com.google.code.gson", name = "gson", version.ref="gson"}
-kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
-okhHttp3-core = {group = "com.squareup.okhttp3", name = "okhttp", version.ref="okhHttp3"}
-okhHttp3-interceptor = {group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref="okhHttp3"}
-
-androidx-navigation-ktx = {group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref="navigationComponent"}
-androidx-navigation-ui = {group = "androidx.navigation", name = "navigation-ui-ktx", version.ref="navigationComponent"}
-androidx-navigation-hilt = {group = "androidx.hilt", name = "hilt-navigation-fragment", version.ref="navigationComponentHilt"}
-
-firebase-bom = {group = "com.google.firebase", name = "firebase-bom", version.ref="firebase"}
-firebase-messaging = {group = "com.google.firebase", name = "firebase-messaging"}
-firebase-analytics = {group = "com.google.firebase", name = "firebase-analytics"}
-firebase-crashlytics = {group = "com.google.firebase", name = "firebase-crashlytics"}
-
+# ---------- Room ----------
 room-ktx = {group = "androidx.room", name = "room-ktx", version.ref="room"}
 room-runtime = {group = "androidx.room", name = "room-runtime", version.ref="room"}
 room-compiler = {group = "androidx.room", name = "room-compiler", version.ref="room"}
 room-common = {group = "androidx.room", name = "room-common", version.ref="room"}
 
+# ---------- Firebase (Use BOM) ----------
+firebase-bom = {group = "com.google.firebase", name = "firebase-bom", version.ref="firebase-bom"}
+firebase-messaging = {group = "com.google.firebase", name = "firebase-messaging"}
+firebase-analytics = {group = "com.google.firebase", name = "firebase-analytics"}
+firebase-crashlytics = {group = "com.google.firebase", name = "firebase-crashlytics"}
+
+# ---------- Utilities ----------
+log-timber = {group = "com.jakewharton.timber", name = "timber", version.ref="timber"}
+desugar = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugar" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+
+# ---------- Testing ----------
+junit = { group = "junit", name = "junit", version.ref = "junit4" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-junit" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+
 # dependency for build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
-firebase-crashlytics-gradlePlugin = { group = "com.google.firebase", name = "firebase-crashlytics-gradle", version.ref = "firebasecrashlyticsplugin" }
+firebase-crashlytics-gradlePlugin = { group = "com.google.firebase", name = "firebase-crashlytics-gradle", version.ref = "firebase-crashlytics-plugin" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -91,9 +144,9 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 com-google-dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 com-google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-androidx-navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigationComponent" }
-com-google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "gms" }
-com-google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebasecrashlyticsplugin" }
+androidx-navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "androidx-navigation" }
+com-google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "google-services" }
+com-google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebase-crashlytics-plugin" }
 
 # Plugins defined by this project
 iamkarim-android-application = { id = "iamkarim.android.application", version = "unspecified" }
