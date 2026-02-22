@@ -1,5 +1,7 @@
 package com.abdulkarim.android_clean_architecture.service
 
+import com.abdulkarim.android_clean_architecture.service.utils.NotificationManager
+import com.abdulkarim.android_clean_architecture.service.utils.NotificationParser
 import com.abdulkarim.domain.notificationusecase.InsertNotificationUseCase
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
@@ -14,6 +16,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class NotificationService : FirebaseMessagingService() {
 
+    @Inject lateinit var notificationManager: NotificationManager
     @Inject lateinit var insertNotificationUseCase: InsertNotificationUseCase
 
     private val serviceJob = SupervisorJob()
@@ -32,11 +35,8 @@ class NotificationService : FirebaseMessagingService() {
             return
         }
 
-        Timber.d("notification receive remote : $remoteMessage")
-        Timber.d("notification receive : $data")
-
         serviceScope.launch {
-            Timber.d("notification : $data")
+            notificationManager.handleNotification(data)
             insertNotificationToDB(data)
         }
 

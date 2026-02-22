@@ -1,8 +1,10 @@
-package com.abdulkarim.android_clean_architecture.service
+package com.abdulkarim.android_clean_architecture.service.utils
+
+import com.abdulkarim.android_clean_architecture.service.NotificationDataEntity
 
 /**
  * [NotificationParser] is a utility object responsible for mapping raw push notification
- * payloads (typically from FCM) into structured [NotificationDataEntity] instances.
+ * payloads (typically from FCM) into structured [com.abdulkarim.android_clean_architecture.service.NotificationDataEntity] instances.
  *
  * Responsibilities:
  * - Extracts predefined keys from a `Map<String, String>` payload.
