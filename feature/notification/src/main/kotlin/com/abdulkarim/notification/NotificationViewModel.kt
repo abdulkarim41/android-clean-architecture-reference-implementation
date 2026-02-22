@@ -1,6 +1,7 @@
 package com.abdulkarim.notification
 
 import com.abdulkarim.common.base.BaseViewModel
+import com.abdulkarim.domain.notificationusecase.DeleteNotificationByIdUseCase
 import com.abdulkarim.domain.notificationusecase.GetAllNotificationUseCase
 import com.abdulkarim.entity.notification.NotificationEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -10,11 +11,13 @@ import javax.inject.Inject
 @HiltViewModel
 class NotificationViewModel @Inject constructor(
     private val getAllNotificationUseCase: GetAllNotificationUseCase,
+    private val deleteNotificationByIdUseCase: DeleteNotificationByIdUseCase,
 ) : BaseViewModel(){
 
     val action: (NotificationUiAction) -> Unit = {
         when (it) {
             is NotificationUiAction.GetAllNotification -> getAllNotifications()
+            is NotificationUiAction.DeleteSingleNotification -> deleteSingleNotification(it.params)
         }
     }
 
@@ -34,6 +37,13 @@ class NotificationViewModel @Inject constructor(
             }
         }
     }
+
+    private fun deleteSingleNotification(params:DeleteNotificationByIdUseCase.Params) {
+        execute {
+            deleteNotificationByIdUseCase.execute(params)
+        }
+    }
+
 }
 
 sealed interface NotificationUiState<out ResultType> {
@@ -43,4 +53,6 @@ sealed interface NotificationUiState<out ResultType> {
 
 sealed interface NotificationUiAction {
     data object GetAllNotification : NotificationUiAction
+    data class DeleteSingleNotification(val params: DeleteNotificationByIdUseCase.Params) : NotificationUiAction
+
 }

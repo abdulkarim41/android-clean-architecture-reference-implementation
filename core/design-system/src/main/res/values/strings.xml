@@ -3,8 +3,10 @@
     <string name="label_posts">Posts</string>
     <string name="label_notification">Notification</string>
 
-    <string name="default_notification_id">Default-Notification-ID-4</string>
+    <string name="message_notification_delete">Notification deleted successfully</string>
 
     <string name="message_image_content_description">image_content_description</string>
+
+    <string name="default_notification_id">Default-Notification-ID-4</string>
 
 </resources>

@@ -18,4 +18,8 @@ class NotificationRepoImpl @Inject constructor(
         return notificationDao.getAllNotifications()
     }
 
+    override suspend fun deleteNotificationById(notificationId: Int) {
+        return notificationDao.deleteSingleNotification(notificationId)
+    }
+
 }

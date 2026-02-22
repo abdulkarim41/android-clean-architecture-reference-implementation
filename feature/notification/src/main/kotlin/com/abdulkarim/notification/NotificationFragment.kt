@@ -4,11 +4,12 @@ import android.os.Bundle
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.abdulkarim.designsystem.R
 import com.abdulkarim.common.base.BaseFragment
+import com.abdulkarim.domain.notificationusecase.DeleteNotificationByIdUseCase
 import com.abdulkarim.notification.databinding.FragmentNotificationBinding
 import com.abdulkarim.ui.extfun.setUpVerticalRecyclerView
 import dagger.hilt.android.AndroidEntryPoint
-import timber.log.Timber
 
 @AndroidEntryPoint
 class NotificationFragment : BaseFragment<FragmentNotificationBinding>() {
@@ -30,6 +31,9 @@ class NotificationFragment : BaseFragment<FragmentNotificationBinding>() {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
 
                 val notificationId = adapter.getNotificationEntity(viewHolder.absoluteAdapterPosition).id
+                viewModel.action(NotificationUiAction.DeleteSingleNotification(
+                    DeleteNotificationByIdUseCase.Params(notificationId)))
+                showMessage(getString(R.string.message_notification_delete))
 
             }
 
