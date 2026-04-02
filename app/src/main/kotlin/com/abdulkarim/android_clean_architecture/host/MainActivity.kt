@@ -12,6 +12,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isVisible
 import androidx.core.view.updatePadding
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -83,6 +84,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.mainNavHostContainerView) as NavHostFragment
         navController = navHostFragment.navController
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            binding.bottomNav.isVisible = destination.id in setOf(
+                R.id.postListFragment,
+                com.abdulkarim.notification.R.id.notificationFragment,
+            )
+        }
 
         NavigationUI.setupWithNavController(binding.bottomNav, navController)
 
