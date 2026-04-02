@@ -69,6 +69,7 @@ firebase = "34.9.0"
 #room = "2.8.4"
 #firebasecrashlyticsplugin = "3.0.6"
 timber = "5.0.1"
+sdp = "1.1.1"
 
 
 
@@ -126,6 +127,8 @@ firebase-crashlytics = {group = "com.google.firebase", name = "firebase-crashlyt
 log-timber = {group = "com.jakewharton.timber", name = "timber", version.ref="timber"}
 desugar = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugar" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+dimension-sdp = {group = "com.intuit.sdp", name = "sdp-android", version.ref="sdp"}
+dimension-ssp = {group = "com.intuit.ssp", name = "ssp-android", version.ref="sdp"}
 
 # ---------- Testing ----------
 junit = { group = "junit", name = "junit", version.ref = "junit4" }
