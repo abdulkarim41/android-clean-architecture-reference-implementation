@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="h1">@dimen/_90ssp</dimen>
+    <dimen name="h2">@dimen/_54ssp</dimen>
+    <dimen name="h3">@dimen/_42ssp</dimen>
+    <dimen name="h4">@dimen/_30ssp</dimen>
+    <dimen name="h5">@dimen/_18ssp</dimen>
+    <dimen name="h6">@dimen/_14ssp</dimen>
+    <dimen name="h7">@dimen/_12ssp</dimen>
+    <dimen name="text_size_toolbar">@dimen/_14ssp</dimen>
+    <dimen name="text_size_regular">@dimen/_11ssp</dimen>
+    <dimen name="text_size_medium">@dimen/_10ssp</dimen>
+    <dimen name="text_size_small">@dimen/_8ssp</dimen>
+    <dimen name="text_size_mini">@dimen/_6ssp</dimen>
+
+    <dimen name="divider_height">@dimen/_4sdp</dimen>
+
+    <dimen name="radius_14sdp">@dimen/_14sdp</dimen>
+    <dimen name="radius_9sdp">@dimen/_9sdp</dimen>
+    <dimen name="radius_7sdp">@dimen/_7sdp</dimen>
+    <dimen name="radius_3sdp">@dimen/_3sdp</dimen>
+
+    <dimen name="button_height_40sdp">@dimen/_40sdp</dimen>
+    <dimen name="button_height_36sdp">@dimen/_36sdp</dimen>
+    <dimen name="button_height_30sdp">@dimen/_30sdp</dimen>
+    <dimen name="button_height_25sdp">@dimen/_25sdp</dimen>
+
+    <dimen name="margin_14sdp">@dimen/_12sdp</dimen>
+    <dimen name="margin_11sdp">@dimen/_10sdp</dimen>
+    <dimen name="margin_9sdp">@dimen/_8sdp</dimen>
+    <dimen name="margin_7sdp">@dimen/_6sdp</dimen>
+    <dimen name="margin_4sdp">@dimen/_4sdp</dimen>
+    <dimen name="margin_2sdp">@dimen/_2sdp</dimen>
+
+    <dimen name="padding_14sdp">@dimen/_12sdp</dimen>
+    <dimen name="padding_11sdp">@dimen/_10sdp</dimen>
+    <dimen name="padding_9sdp">@dimen/_8sdp</dimen>
+    <dimen name="padding_7sdp">@dimen/_6sdp</dimen>
+    <dimen name="padding_4sdp">@dimen/_4sdp</dimen>
+    <dimen name="padding_2sdp">@dimen/_2sdp</dimen>
+
+    <dimen name="screen_edge_margin">@dimen/_12sdp</dimen>
+    <dimen name="screen_edge_padding">@dimen/_12sdp</dimen>
+
+</resources>
