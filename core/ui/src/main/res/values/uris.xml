@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="deep_link_login_fragment">app://com.abdulkarim/login</string>
+
     <string name="deep_link_post_list_fragment">app://com.abdulkarim/postList</string>
     <string name="deep_link_notification_fragment">app://co.jatri.rentalowner/notification</string>
 
