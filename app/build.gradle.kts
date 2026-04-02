@@ -53,7 +53,7 @@ dependencies {
 
     implementation(projects.featureCredential.login)
 
-    implementation(projects.feature.postList)
+    //implementation(projects.feature.postList)
     implementation(projects.feature.notification)
 
     implementation(libs.androidx.core.ktx)

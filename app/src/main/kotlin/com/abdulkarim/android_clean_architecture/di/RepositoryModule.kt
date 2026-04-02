@@ -1,7 +1,9 @@
 package com.abdulkarim.android_clean_architecture.di
 
+import com.abdulkarim.data.repoimpl.CredentialRepoImpl
 import com.abdulkarim.data.repoimpl.NotificationRepoImpl
 import com.abdulkarim.data.repoimpl.RepositoryImpl
+import com.abdulkarim.domain.repository.CredentialRepository
 import com.abdulkarim.domain.repository.NotificationRepository
 import com.abdulkarim.domain.repository.Repository
 import dagger.Binds
@@ -13,8 +15,11 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 interface RepositoryModule {
 
+//    @Binds
+//    fun bindRepository(repositoryImpl: RepositoryImpl): Repository
+
     @Binds
-    fun bindRepository(repositoryImpl: RepositoryImpl): Repository
+    fun bindRepository(credentialRepoImpl: CredentialRepoImpl): CredentialRepository
 
     @Binds
     fun bindNotificationRepository(repositoryImpl: NotificationRepoImpl): NotificationRepository

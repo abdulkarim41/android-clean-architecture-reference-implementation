@@ -20,4 +20,12 @@ object ApiServicesModule {
         return retrofit.create(ApiService::class.java)
     }
 
+    @Provides
+    @Singleton
+    fun provideCredentialApiService(
+        @AppBaseUrl retrofit: Retrofit,
+    ): CredentialApiService {
+        return retrofit.create(CredentialApiService::class.java)
+    }
+
 }
