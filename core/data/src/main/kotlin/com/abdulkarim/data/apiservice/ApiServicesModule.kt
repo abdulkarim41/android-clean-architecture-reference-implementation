@@ -28,4 +28,12 @@ object ApiServicesModule {
         return retrofit.create(CredentialApiService::class.java)
     }
 
+    @Provides
+    @Singleton
+    fun provideCommonApiService(
+        @AppBaseUrl retrofit: Retrofit,
+    ): CommonApiService {
+        return retrofit.create(CommonApiService::class.java)
+    }
+
 }
