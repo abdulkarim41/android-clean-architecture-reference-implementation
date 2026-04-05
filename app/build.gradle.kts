@@ -51,6 +51,7 @@ dependencies {
     implementation(projects.core.model.apiresponse)
     implementation(projects.core.model.entity)
 
+    implementation(projects.featureCredential.splash)
     implementation(projects.featureCredential.login)
 
     //implementation(projects.feature.postList)
