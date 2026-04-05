@@ -5,12 +5,16 @@ import com.abdulkarim.domain.apiusecase.common.FetchProfileApiUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import com.abdulkarim.common.base.Result
+import com.abdulkarim.sharedpref.SharedPrefHelper
+import com.abdulkarim.sharedpref.SpKey
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import javax.inject.Inject
 
 @HiltViewModel
 class SplashViewModel @Inject constructor(
+    private val sharedPrefHelper: SharedPrefHelper,
     private val fetchProfileApiUseCase: FetchProfileApiUseCase,
 ) : BaseViewModel() {
 
@@ -23,10 +27,18 @@ class SplashViewModel @Inject constructor(
     private val _uiState = MutableStateFlow<SplashUiState<Any>>(SplashUiState.Loading(isLoading = true))
     val uiState get() = _uiState
 
-    private val _uiEvent = Channel<SplashUiEvent<Any>>()
-    val uiEvent get() = _uiEvent.receiveAsFlow()
+    private val _uiEvent = MutableSharedFlow<SplashUiEvent<Any>>()
+    val uiEvent get() = _uiEvent
 
-    init { fetchProfileApi() }
+    init { checkLoginStatus() }
+
+    private fun checkLoginStatus() {
+        if (sharedPrefHelper.getBoolean(SpKey.isUserLoggedIn)) {
+            fetchProfileApi()
+            return
+        }
+        _uiEvent.tryEmit(SplashUiEvent.NavigateToLogin)
+    }
 
     private fun fetchProfileApi() {
         execute {
@@ -35,12 +47,12 @@ class SplashViewModel @Inject constructor(
                     is Result.Loading -> _uiState.value = SplashUiState.Loading(isLoading = result.loading)
                     is Result.Error -> {
                         if (result.code == 401 || result.code == 402) {
-                            _uiEvent.send(SplashUiEvent.NavigateToLogin)
+                            _uiEvent.tryEmit(SplashUiEvent.NavigateToLogin)
                             return@collect
                         }
                         _uiState.value = SplashUiState.ApiError(message = result.message, code = result.code)
                     }
-                    is Result.Success -> _uiEvent.send(SplashUiEvent.NavigateToHome)
+                    is Result.Success -> _uiEvent.tryEmit(SplashUiEvent.NavigateToHome)
                 }
             }
         }

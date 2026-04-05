@@ -2,11 +2,11 @@ package com.abdulkarim.splash
 
 import android.os.Bundle
 import androidx.core.net.toUri
+import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import com.abdulkarim.common.base.BaseFragment
 import com.abdulkarim.splash.databinding.FragmentSplashBinding
 import com.abdulkarim.ui.extfun.navigate
-import com.abdulkarim.ui.R
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.getValue
 
@@ -28,10 +28,9 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
         when(event){
             is SplashUiEvent.NavigateToLogin -> navigate(
                 getString(R.string.deep_link_login_fragment).toUri(),
-                popupToId = com.abdulkarim.splash.R.id.splashFragment,
+                popupToId = R.id.splashFragment,
                 popupToInclusive = true
             )
-
             is SplashUiEvent.NavigateToHome -> {
                 // navigate to home fragment
             }
@@ -41,7 +40,7 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
     private fun observeUiState(state: SplashUiState<*>){
         when(state){
             is SplashUiState.Loading -> {
-                // show loading
+                binding.progressbar.isVisible = state.isLoading
             }
 
             is SplashUiState.ApiError -> {
