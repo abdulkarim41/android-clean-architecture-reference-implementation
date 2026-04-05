@@ -12,7 +12,7 @@ class PostLoginApiUseCase @Inject constructor(
 ) : ApiUseCaseParams<PostLoginApiUseCase.Params, LoginApiEntity> {
 
     data class Params(
-        val mobile: String,
+        val username: String,
         val password: String,
     )
 

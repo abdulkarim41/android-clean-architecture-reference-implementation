@@ -29,7 +29,7 @@ class LoginViewModel @Inject constructor(
         execute {
             postLoginApiUseCase.execute(params).collect { result ->
                 when (result) {
-                    is Result.Success -> _uiEvent.send(LoginUiEvent.ApiSuccess)
+                    is Result.Success -> fetchProfileApi()
                     is Result.Loading -> _uiEvent.send(LoginUiEvent.Loading)
                     is Result.Error -> _uiEvent.send(LoginUiEvent.ApiError(message = result.message))
                 }

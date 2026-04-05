@@ -20,7 +20,7 @@ class CredentialRepoImpl @Inject constructor(
     override suspend fun postLoginApi(params: PostLoginApiUseCase.Params): Flow<Result<LoginApiEntity>> {
         return mapFromApiResponse(
             result = networkBoundResource.downloadData {
-                credentialApiService.postLoginApi()
+                credentialApiService.postLoginApi(params)
             }, mapper = loginApiMapper
         )
     }
