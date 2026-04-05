@@ -32,7 +32,11 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
                 popupToInclusive = true
             )
             is SplashUiEvent.NavigateToHome -> {
-                // navigate to home fragment
+                navigate(
+                    getString(R.string.deep_link_products_fragment).toUri(),
+                    popupToId = R.id.splashFragment,
+                    popupToInclusive = true
+                )
             }
         }
     }

@@ -37,7 +37,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
             is LoginUiEvent.Loading -> {}
             is LoginUiEvent.ApiError -> showMessage(event.message)
             is LoginUiEvent.ApiSuccess -> {
-                navigate(uri = getString(R.string.deep_link_post_list_fragment).toUri())
+                navigate(uri = getString(R.string.deep_link_products_fragment).toUri())
             }
             is LoginUiEvent.ProfileApiSuccess -> {}
         }
