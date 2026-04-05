@@ -33,7 +33,7 @@ include(":core:model:entity")
 include(":core:domain")
 include(":common")
 include(":core:di")
-include(":feature:post-list")
+include(":feature-product:products")
 
 include(":feature-common:notification")
 include(":feature-credential:login")

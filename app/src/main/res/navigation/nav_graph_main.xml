@@ -9,9 +9,9 @@
 
     <fragment
         android:id="@+id/postListFragment"
-        android:name="com.abdulkarim.postlist.PostListFragment"
+        android:name="com.abdulkarim.products.ProductsFragment"
         android:label="postListFragment"
-        tools:layout="@layout/fragment_post_list">
+        tools:layout="@layout/fragment_products">
 
         <deepLink app:uri="@string/deep_link_post_list_fragment"/>
 

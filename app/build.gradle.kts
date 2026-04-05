@@ -50,15 +50,17 @@ dependencies {
     implementation(projects.core.domain)
     implementation(projects.core.model.apiresponse)
     implementation(projects.core.model.entity)
+
     implementation(projects.library.secureStorage)
     implementation(projects.library.sharedpref)
 
     implementation(projects.featureCredential.splash)
     implementation(projects.featureCredential.login)
 
-    //implementation(projects.feature.postList)
     implementation(projects.featureCommon.notification)
     implementation(projects.featureCommon.profile)
+
+    implementation(projects.featureProduct.products)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

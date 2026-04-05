@@ -16,10 +16,10 @@ object ApiServicesModule {
 
     @Provides
     @Singleton
-    fun provideApiService(
+    fun provideProductApiService(
         @AppBaseUrl retrofit: Retrofit,
-    ): ApiService {
-        return retrofit.create(ApiService::class.java)
+    ): ProductApiService {
+        return retrofit.create(ProductApiService::class.java)
     }
 
     @Provides
