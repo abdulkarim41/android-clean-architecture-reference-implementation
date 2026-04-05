@@ -42,6 +42,8 @@
             <option value="$PROJECT_DIR$/feature-credential/splash" />
             <option value="$PROJECT_DIR$/feature/notification" />
             <option value="$PROJECT_DIR$/feature/post-list" />
+            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/library/sharedpref" />
           </set>
         </option>
       </GradleProjectSettings>

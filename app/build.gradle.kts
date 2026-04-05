@@ -50,6 +50,7 @@ dependencies {
     implementation(projects.core.domain)
     implementation(projects.core.model.apiresponse)
     implementation(projects.core.model.entity)
+    implementation(projects.library.sharedpref)
 
     implementation(projects.featureCredential.splash)
     implementation(projects.featureCredential.login)

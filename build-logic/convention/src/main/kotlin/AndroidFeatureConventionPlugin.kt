@@ -32,6 +32,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 add("implementation", project(":common"))
                 add("implementation", project(":core:ui"))
                 add("implementation", project(":core:design-system"))
+                add("implementation", project(":library:sharedpref"))
 
                 add("implementation", libs.findLibrary("androidx.appcompat").get())
                 add("implementation", libs.findLibrary("androidx.core.ktx").get())
