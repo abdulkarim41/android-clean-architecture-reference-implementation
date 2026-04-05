@@ -10,6 +10,7 @@ android {
 }
 
 dependencies{
+    api(projects.library.secureStorage)
     implementation(libs.log.timber)
 }
 

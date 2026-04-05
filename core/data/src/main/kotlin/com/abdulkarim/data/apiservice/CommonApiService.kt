@@ -6,7 +6,7 @@ import retrofit2.http.*
 
 interface CommonApiService {
 
-    @POST("auth/me")
+    @GET("auth/me")
     suspend fun fetchProfileApi(): Response<ProfileApiResponse>
 
 }

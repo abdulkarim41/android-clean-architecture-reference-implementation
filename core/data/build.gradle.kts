@@ -14,6 +14,8 @@ dependencies {
     implementation(projects.core.domain)
     implementation(projects.core.model.entity)
     implementation(projects.core.cache)
+    implementation(projects.library.sharedpref)
+    implementation(projects.library.secureStorage)
     implementation(projects.core.model.apiresponse)
     implementation(projects.common)
 

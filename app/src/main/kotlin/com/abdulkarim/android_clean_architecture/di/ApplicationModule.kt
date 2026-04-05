@@ -1,10 +1,8 @@
 package com.abdulkarim.android_clean_architecture.di
 
 import android.content.Context
-import com.abdulkarim.securestorage.SecureStorage
-import com.abdulkarim.securestorage.SecureStorageImpl
+import com.abdulkarim.di.authrefresh.AuthRefreshServiceHolder
 import com.abdulkarim.sharedpref.SharedPrefHelper
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,15 +18,8 @@ object ApplicationModule {
     @Singleton
     fun sharePrefHelper(@ApplicationContext context: Context): SharedPrefHelper = SharedPrefHelper(context)
 
-}
-
-@Module
-@InstallIn(SingletonComponent::class)
-abstract class SecureStorageModule {
-
-    @Binds
+    @Provides
     @Singleton
-    abstract fun bindSecureStorage(
-        secureStorageImpl: SecureStorageImpl
-    ): SecureStorage
+    fun provideAuthRefreshServiceHolder() : AuthRefreshServiceHolder = AuthRefreshServiceHolder()
+
 }

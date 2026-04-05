@@ -1,5 +1,7 @@
 package com.abdulkarim.di.module
 
+import com.abdulkarim.di.authrefresh.AuthenticationRefreshToken
+import com.abdulkarim.securestorage.SecureStorage
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,19 +25,30 @@ object OkHttpModule {
         return interceptor
     }
 
-
     @Provides
     @Singleton
     fun provideOkHttpClient(
         loggerInterceptor: HttpLoggingInterceptor,
+        secureStorage: SecureStorage,
+        refreshToken: AuthenticationRefreshToken,
     ): OkHttpClient {
+        val accessToken = secureStorage.getAccessToken()
         val timeOut = 30
         val httpClient = OkHttpClient().newBuilder()
             .connectTimeout(timeOut.toLong(), TimeUnit.SECONDS)
             .readTimeout(timeOut.toLong(), TimeUnit.SECONDS)
             .writeTimeout(timeOut.toLong(), TimeUnit.SECONDS)
 
+        httpClient.authenticator(refreshToken)
         httpClient.addInterceptor(loggerInterceptor)
+        httpClient.addInterceptor { chain ->
+            val original = chain.request()
+            val requestBuilder = original.newBuilder()
+                .addHeader("Accept", "application/json")
+                .addHeader("Authorization", "Bearer $accessToken")
+            val request = requestBuilder.build()
+            chain.proceed(request)
+        }
 
         return httpClient.build()
     }
