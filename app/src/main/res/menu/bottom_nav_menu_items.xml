@@ -2,13 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/postListFragment"
-        android:title="@string/label_posts"
+        android:id="@+id/productsFragment"
+        android:title="@string/label_products"
         android:icon="@drawable/ic_plus_rounded"/>
 
     <item
         android:id="@+id/nav_graph_notification"
         android:title="@string/label_notification"
+        android:icon="@drawable/ic_notification_rounded"/>
+
+    <item
+        android:title="@string/label_profile"
         android:icon="@drawable/ic_notification_rounded"/>
 
 </menu>

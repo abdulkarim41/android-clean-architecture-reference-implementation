@@ -1,7 +1,8 @@
 <resources>
 
-    <string name="label_posts">Posts</string>
+    <string name="label_products">Products</string>
     <string name="label_notification">Notification</string>
+    <string name="label_profile">Profile</string>
 
     <string name="action_login">Login</string>
 

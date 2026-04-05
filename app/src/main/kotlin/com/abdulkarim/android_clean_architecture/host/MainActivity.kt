@@ -87,7 +87,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             binding.bottomNav.isVisible = destination.id in setOf(
-                R.id.postListFragment,
+                R.id.productsFragment,
                 com.abdulkarim.notification.R.id.notificationFragment,
             )
         }
@@ -95,7 +95,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         NavigationUI.setupWithNavController(binding.bottomNav, navController)
 
         binding.bottomNav.setOnItemSelectedListener { item ->
-            navController.popBackStack(R.id.postListFragment, false)
+            navController.popBackStack(R.id.productsFragment, false)
             navController.navigate(item.itemId)
             true
         }

@@ -39,7 +39,7 @@ class PendingIntentFactory @Inject constructor(
     fun create(data: NotificationDataEntity): PendingIntent {
         val destination = when (data.clickAction) {
 
-            AppConstants.LANDING_POSTS_FRAGMENT -> R.id.postListFragment
+            AppConstants.LANDING_POSTS_FRAGMENT -> R.id.productsFragment
 
             else -> return defaultIntent()
         }
