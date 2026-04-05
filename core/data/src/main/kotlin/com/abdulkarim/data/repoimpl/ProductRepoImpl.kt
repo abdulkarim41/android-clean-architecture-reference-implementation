@@ -15,12 +15,12 @@ class ProductRepoImpl @Inject constructor(
     private val productApiService: ProductApiService,
     private val productsApiMapper: ProductsApiMapper,
 
-    ) : ProductRepository {
+ ) : ProductRepository {
 
-    override suspend fun fetchProductsApi(): Flow<Result<List<ProductApiEntity>>> {
+    override suspend fun fetchProductsApi(page: Int): Flow<Result<List<ProductApiEntity>>> {
         return mapFromApiResponse(
             result = networkBoundResource.downloadData {
-                productApiService.fetchProductsApi()
+                productApiService.fetchProductsApi(page)
             },
             mapper = productsApiMapper
         )

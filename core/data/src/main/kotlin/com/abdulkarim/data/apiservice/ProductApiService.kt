@@ -7,6 +7,9 @@ import retrofit2.http.*
 interface ProductApiService {
 
     @GET("products")
-    suspend fun fetchProductsApi() : Response<ProductApiResponse>
+    suspend fun fetchProductsApi(
+        @Query("skip") skip: Int = 0,
+        @Query("limit") limit: Int = 10,
+    ) : Response<ProductApiResponse>
 
 }
