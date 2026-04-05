@@ -57,7 +57,8 @@ dependencies {
     implementation(projects.featureCredential.login)
 
     //implementation(projects.feature.postList)
-    implementation(projects.feature.notification)
+    implementation(projects.featureCommon.notification)
+    implementation(projects.featureCommon.profile)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

@@ -4,6 +4,7 @@
     <bytecodeTargetLevel target="17">
       <module name="android-clean-architecture-reference-implementation.feature-credential.phoneverify" target="21" />
       <module name="android-clean-architecture-reference-implementation.feature-credential.registration" target="21" />
+      <module name="android-clean-architecture-reference-implementation.feature.notification" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>
