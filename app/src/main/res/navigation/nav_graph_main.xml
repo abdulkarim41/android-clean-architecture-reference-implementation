@@ -6,6 +6,7 @@
     app:startDestination="@id/productsFragment">
 
     <include app:graph="@navigation/nav_graph_notification"/>
+    <include app:graph="@navigation/nav_graph_profile"/>
 
     <fragment
         android:id="@+id/productsFragment"

@@ -4,7 +4,7 @@
     <item
         android:id="@+id/productsFragment"
         android:title="@string/label_products"
-        android:icon="@drawable/ic_plus_rounded"/>
+        android:icon="@drawable/outline_home_app_logo_24"/>
 
     <item
         android:id="@+id/nav_graph_notification"
@@ -12,7 +12,8 @@
         android:icon="@drawable/ic_notification_rounded"/>
 
     <item
+        android:id="@+id/nav_graph_profile"
         android:title="@string/label_profile"
-        android:icon="@drawable/ic_notification_rounded"/>
+        android:icon="@drawable/outline_person_24"/>
 
 </menu>
