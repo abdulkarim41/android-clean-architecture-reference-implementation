@@ -2,6 +2,7 @@ package com.abdulkarim.login
 
 import com.abdulkarim.common.base.Result
 import com.abdulkarim.common.base.BaseViewModel
+import com.abdulkarim.domain.apiusecase.common.FetchProfileApiUseCase
 import com.abdulkarim.domain.apiusecase.credential.PostLoginApiUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
@@ -11,11 +12,13 @@ import javax.inject.Inject
 @HiltViewModel
 class LoginViewModel @Inject constructor(
     private val postLoginApiUseCase: PostLoginApiUseCase,
+    private val fetchProfileApiUseCase: FetchProfileApiUseCase,
 ) : BaseViewModel() {
 
     val action: (LoginUiAction) -> Unit = { action ->
         when (action) {
             is LoginUiAction.PostLoginApiAction -> postLoginApi(action.params)
+            is LoginUiAction.FetchProfileApiAction -> fetchProfileApi()
         }
     }
 
@@ -28,19 +31,34 @@ class LoginViewModel @Inject constructor(
                 when (result) {
                     is Result.Success -> _uiEvent.send(LoginUiEvent.ApiSuccess)
                     is Result.Loading -> _uiEvent.send(LoginUiEvent.Loading)
-                    is Result.Error -> _uiEvent.send(LoginUiEvent.LoginApiError(message = result.message))
+                    is Result.Error -> _uiEvent.send(LoginUiEvent.ApiError(message = result.message))
                 }
             }
         }
     }
+
+    private fun fetchProfileApi() {
+        execute {
+            fetchProfileApiUseCase.execute().collect { result ->
+                when (result) {
+                    is Result.Loading -> _uiEvent.send(LoginUiEvent.Loading)
+                    is Result.Success -> _uiEvent.send(LoginUiEvent.ProfileApiSuccess)
+                    is Result.Error -> _uiEvent.send(LoginUiEvent.ApiError(message = result.message))
+                }
+            }
+        }
+    }
+
 }
 
 sealed interface LoginUiEvent<out ResultType> {
     data object Loading : LoginUiEvent<Loading>
     data object ApiSuccess : LoginUiEvent<ApiSuccess>
-    data class LoginApiError(val message: String) : LoginUiEvent<LoginApiError>
+    data class ApiError(val message: String) : LoginUiEvent<ApiError>
+    data object ProfileApiSuccess : LoginUiEvent<ProfileApiSuccess>
 }
 
 sealed interface LoginUiAction {
     data class PostLoginApiAction(val params: PostLoginApiUseCase.Params) : LoginUiAction
+    data object FetchProfileApiAction : LoginUiAction
 }

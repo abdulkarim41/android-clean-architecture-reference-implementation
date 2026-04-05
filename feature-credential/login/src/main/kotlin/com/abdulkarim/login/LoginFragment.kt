@@ -24,8 +24,9 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
 
         when (event) {
             is LoginUiEvent.Loading -> {}
-            is LoginUiEvent.LoginApiError -> showMessage(event.message)
+            is LoginUiEvent.ApiError -> showMessage(event.message)
             is LoginUiEvent.ApiSuccess -> {}
+            is LoginUiEvent.ProfileApiSuccess -> {}
         }
     }
 
