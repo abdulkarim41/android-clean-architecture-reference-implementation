@@ -1,4 +1,4 @@
-package com.abdulkarim.entity
+package com.abdulkarim.entity.product
 
 data class ProductApiEntity(
     val id: String,

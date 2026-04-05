@@ -3,7 +3,7 @@ package com.abdulkarim.products
 import com.abdulkarim.common.base.Result
 import com.abdulkarim.common.base.BaseViewModel
 import com.abdulkarim.domain.apiusecase.product.FetchProductsApiUseCase
-import com.abdulkarim.entity.ProductApiEntity
+import com.abdulkarim.entity.product.ProductApiEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import javax.inject.Inject

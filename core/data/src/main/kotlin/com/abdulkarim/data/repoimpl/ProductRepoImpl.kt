@@ -6,7 +6,7 @@ import com.abdulkarim.data.mapper.product.ProductsApiMapper
 import com.abdulkarim.data.mapper.mapFromApiResponse
 import com.abdulkarim.data.wrapper.NetworkBoundResource
 import com.abdulkarim.domain.repository.ProductRepository
-import com.abdulkarim.entity.ProductApiEntity
+import com.abdulkarim.entity.product.ProductApiEntity
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

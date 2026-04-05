@@ -2,7 +2,7 @@ package com.abdulkarim.data.mapper.product
 
 import com.abdulkarim.apiresponse.product.ProductApiResponse
 import com.abdulkarim.data.mapper.Mapper
-import com.abdulkarim.entity.ProductApiEntity
+import com.abdulkarim.entity.product.ProductApiEntity
 import javax.inject.Inject
 
 class ProductsApiMapper @Inject constructor() :
