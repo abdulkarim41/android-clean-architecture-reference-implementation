@@ -1,16 +1,15 @@
 package com.abdulkarim.sharedpref
 
 import android.content.Context
-import androidx.core.content.edit
 
 class SharedPrefHelper(application: Context) {
     private var sharedPreferences =
         application.getSharedPreferences("com.abdulkarim.sharedpref", 0)
 
     fun putString(key: String, value: String) {
-        sharedPreferences.edit {
-            putString(key, value)
-        }
+        val editor = sharedPreferences.edit()
+        editor.putString(key, value)
+        editor.apply()
     }
 
     fun getString(key: String): String {
@@ -18,15 +17,15 @@ class SharedPrefHelper(application: Context) {
     }
 
     fun putBool(key: String, value: Boolean) {
-        sharedPreferences.edit {
-            putBoolean(key, value)
-        }
+        val editor = sharedPreferences.edit()
+        editor.putBoolean(key, value)
+        editor.apply()
     }
 
     fun putInt(key: String, value: Int) {
-        sharedPreferences.edit {
-            putInt(key, value)
-        }
+        val editor = sharedPreferences.edit()
+        editor.putInt(key, value)
+        editor.apply()
     }
 
     fun getBoolean(key: String): Boolean {
@@ -38,6 +37,6 @@ class SharedPrefHelper(application: Context) {
     }
 
     fun clearAllCache() {
-        sharedPreferences.edit { clear() }
+        sharedPreferences.edit().clear().apply()
     }
 }

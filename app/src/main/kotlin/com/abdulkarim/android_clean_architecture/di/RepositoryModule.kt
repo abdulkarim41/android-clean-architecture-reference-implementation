@@ -18,10 +18,10 @@ import dagger.hilt.components.SingletonComponent
 interface RepositoryModule {
 
     @Binds
-    fun bindRepository(commonRepoImpl: CommonRepoImpl): CommonRepository
+    fun bindCommonRepository(commonRepoImpl: CommonRepoImpl): CommonRepository
 
     @Binds
-    fun bindRepository(credentialRepoImpl: CredentialRepoImpl): CredentialRepository
+    fun bindCredentialRepository(credentialRepoImpl: CredentialRepoImpl): CredentialRepository
 
     @Binds
     fun bindNotificationRepository(repositoryImpl: NotificationRepoImpl): NotificationRepository

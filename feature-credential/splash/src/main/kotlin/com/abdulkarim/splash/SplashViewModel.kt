@@ -7,7 +7,6 @@ import kotlinx.coroutines.channels.Channel
 import com.abdulkarim.common.base.Result
 import com.abdulkarim.sharedpref.SharedPrefHelper
 import com.abdulkarim.sharedpref.SpKey
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import javax.inject.Inject
@@ -27,8 +26,8 @@ class SplashViewModel @Inject constructor(
     private val _uiState = MutableStateFlow<SplashUiState<Any>>(SplashUiState.Loading(isLoading = true))
     val uiState get() = _uiState
 
-    private val _uiEvent = MutableSharedFlow<SplashUiEvent<Any>>()
-    val uiEvent get() = _uiEvent
+    private val _uiEvent = Channel<SplashUiEvent<Any>>()
+    val uiEvent get() = _uiEvent.receiveAsFlow()
 
     init { checkLoginStatus() }
 
@@ -37,7 +36,7 @@ class SplashViewModel @Inject constructor(
             fetchProfileApi()
             return
         }
-        _uiEvent.tryEmit(SplashUiEvent.NavigateToLogin)
+        _uiEvent.publishEvent(SplashUiEvent.NavigateToLogin)
     }
 
     private fun fetchProfileApi() {
@@ -47,12 +46,12 @@ class SplashViewModel @Inject constructor(
                     is Result.Loading -> _uiState.value = SplashUiState.Loading(isLoading = result.loading)
                     is Result.Error -> {
                         if (result.code == 401 || result.code == 402) {
-                            _uiEvent.tryEmit(SplashUiEvent.NavigateToLogin)
+                            _uiEvent.send(SplashUiEvent.NavigateToLogin)
                             return@collect
                         }
                         _uiState.value = SplashUiState.ApiError(message = result.message, code = result.code)
                     }
-                    is Result.Success -> _uiEvent.tryEmit(SplashUiEvent.NavigateToHome)
+                    is Result.Success -> _uiEvent.send(SplashUiEvent.NavigateToHome)
                 }
             }
         }
