@@ -7,7 +7,9 @@ import androidx.navigation.fragment.navArgs
 import com.abdulkarim.common.base.BaseFragment
 import com.abdulkarim.entity.product.ProductDetailsApiEntity
 import com.abdulkarim.productdetails.databinding.FragmentProductDetailsBinding
+import com.abdulkarim.ui.extfun.clickWithDebounce
 import com.abdulkarim.ui.extfun.loadImage
+import com.abdulkarim.ui.extfun.popBack
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -23,6 +25,10 @@ class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
         viewmodel.uiState bindTo :: handleUiState
 
         viewmodel.action(ProductDetailsUiAction.FetchProductDetailsApi(arg.productId))
+
+        binding.backBtn.clickWithDebounce {
+            popBack()
+        }
     }
 
     private fun handleUiState(state: ProductDetailsUiState<Any>) {
