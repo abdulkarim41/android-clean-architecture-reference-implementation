@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main"
-    app:startDestination="@id/productsFragment">
+    app:startDestination="@id/nav_graph_products">
 
-    <include app:graph="@navigation/nav_graph_notification"/>
+    <include app:graph="@navigation/nav_graph_products"/>
+    <include app:graph="@navigation/nav_graph_carts"/>
     <include app:graph="@navigation/nav_graph_profile"/>
-
-    <fragment
-        android:id="@+id/productsFragment"
-        android:name="com.abdulkarim.products.ProductsFragment"
-        android:label="postListFragment"
-        tools:layout="@layout/fragment_products">
-
-        <deepLink app:uri="@string/deep_link_products_fragment"/>
-
-    </fragment>
 
 </navigation>

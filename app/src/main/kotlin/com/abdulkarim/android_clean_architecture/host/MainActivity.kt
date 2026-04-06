@@ -88,7 +88,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             binding.bottomNav.isVisible = destination.id in setOf(
                 R.id.productsFragment,
-                R.id.notificationFragment,
+                R.id.cartsFragment,
                 R.id.profileFragment
             )
         }
