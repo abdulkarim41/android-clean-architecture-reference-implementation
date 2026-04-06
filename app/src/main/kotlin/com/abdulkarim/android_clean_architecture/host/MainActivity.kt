@@ -20,6 +20,8 @@ import androidx.navigation.ui.NavigationUI
 import com.abdulkarim.android_clean_architecture.R
 import com.abdulkarim.android_clean_architecture.databinding.ActivityMainBinding
 import com.abdulkarim.common.base.BaseActivity
+import com.abdulkarim.sharedpref.SharedPrefHelper
+import com.abdulkarim.sharedpref.SpKey
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -60,6 +62,20 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         requestNotificationPermission()
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        handleDeepLink(intent)
+        super.onCreate(savedInstanceState)
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleDeepLink(intent)
+        if (::navController.isInitialized) {
+            navController.handleDeepLink(intent)
+        }
+    }
+
     private fun requestNotificationPermission() {
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) return
@@ -78,6 +94,19 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 )
             }
         }
+    }
+
+    private fun handleDeepLink(intent: Intent) {
+        val data: Uri? = intent.data
+        if (data != null && data.toString().contains("click.abdulkarim.com")) {
+            // we can not access hilt @SharedPrefHelper
+            // Because we have to check the login status before the hilt injection in onCreate
+            val prefs = SharedPrefHelper(application)
+            if (!prefs.getBoolean(SpKey.isUserLoggedIn)){
+                intent.data = null
+            }
+        }
+
     }
 
     private fun setupNavigation() {

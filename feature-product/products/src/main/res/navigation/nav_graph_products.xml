@@ -11,6 +11,9 @@
         android:label="ProductsFragment"
         tools:layout="@layout/fragment_products">
 
+        <deepLink
+            app:uri="https://click.abdulkarim.com/products"/>
+
         <deepLink app:uri="@string/deep_link_products_fragment"/>
 
     </fragment>
