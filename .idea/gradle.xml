@@ -45,6 +45,7 @@
             <option value="$PROJECT_DIR$/feature-credential/login" />
             <option value="$PROJECT_DIR$/feature-credential/splash" />
             <option value="$PROJECT_DIR$/feature-product" />
+            <option value="$PROJECT_DIR$/feature-product/product-details" />
             <option value="$PROJECT_DIR$/feature-product/products" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/library/secure-storage" />

@@ -57,10 +57,12 @@ dependencies {
     implementation(projects.featureCredential.splash)
     implementation(projects.featureCredential.login)
 
-    implementation(projects.featureCommon.notification)
     implementation(projects.featureCommon.profile)
+    implementation(projects.featureCommon.notification)
 
     implementation(projects.featureProduct.products)
+    implementation(projects.featureProduct.productDetails)
+
     implementation(projects.featureCart.carts)
 
     implementation(libs.androidx.core.ktx)

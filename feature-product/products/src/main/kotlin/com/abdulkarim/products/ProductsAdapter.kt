@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import com.abdulkarim.common.base.BaseListAdapter
 import com.abdulkarim.entity.product.ProductApiEntity
-import com.abdulkarim.postlist.databinding.ItemProductBinding
+import com.abdulkarim.products.databinding.ItemProductBinding
 import com.abdulkarim.ui.extfun.clickWithDebounce
 
 class ProductsAdapter(

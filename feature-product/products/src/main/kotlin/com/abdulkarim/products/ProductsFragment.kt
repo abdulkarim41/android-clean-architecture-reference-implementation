@@ -1,11 +1,13 @@
 package com.abdulkarim.products
 
 import android.os.Bundle
+import androidx.core.net.toUri
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.RecyclerView
 import com.abdulkarim.common.base.BaseFragment
-import com.abdulkarim.postlist.databinding.FragmentProductsBinding
+import com.abdulkarim.products.databinding.FragmentProductsBinding
+import com.abdulkarim.ui.extfun.navigate
 import com.abdulkarim.ui.extfun.setUpVerticalRecyclerView
 import com.abdulkarim.ui.utils.autoCleared
 import dagger.hilt.android.AndroidEntryPoint
@@ -25,7 +27,7 @@ class ProductsFragment : BaseFragment<FragmentProductsBinding>() {
 
         adapter = ProductsAdapter(
             onItemClicked = {
-                showMessage(it.title)
+                navigate(uri = getString(R.string.deep_link_product_details_fragment).toUri())
             }
         )
 

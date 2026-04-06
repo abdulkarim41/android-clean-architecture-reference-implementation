@@ -5,6 +5,7 @@
     app:startDestination="@id/nav_graph_products">
 
     <include app:graph="@navigation/nav_graph_products"/>
+    <include app:graph="@navigation/nav_graph_product_details"/>
     <include app:graph="@navigation/nav_graph_carts"/>
     <include app:graph="@navigation/nav_graph_profile"/>
 

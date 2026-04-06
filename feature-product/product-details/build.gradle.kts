@@ -3,5 +3,9 @@ plugins {
 }
 
 android {
-    namespace = "com.abdulkarim.products"
+    namespace = "com.abdulkarim.productdetails"
+}
+
+dependencies {
+
 }
