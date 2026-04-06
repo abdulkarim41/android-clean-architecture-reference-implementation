@@ -36,6 +36,8 @@
             <option value="$PROJECT_DIR$/core/model/apiresponse" />
             <option value="$PROJECT_DIR$/core/model/entity" />
             <option value="$PROJECT_DIR$/core/ui" />
+            <option value="$PROJECT_DIR$/feature-cart" />
+            <option value="$PROJECT_DIR$/feature-cart/carts" />
             <option value="$PROJECT_DIR$/feature-common" />
             <option value="$PROJECT_DIR$/feature-common/notification" />
             <option value="$PROJECT_DIR$/feature-common/profile" />

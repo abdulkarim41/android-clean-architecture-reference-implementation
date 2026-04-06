@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_carts"
+    app:startDestination="@id/cartsFragment">
+
+    <fragment
+        android:id="@+id/cartsFragment"
+        android:name="com.abdulkarim.carts.CartsFragment"
+        android:label="CartsFragment"
+        tools:layout="@layout/fragment_carts">
+
+        <deepLink app:uri="@string/deep_link_carts_fragment"/>
+        
+
+    </fragment>
+
+</navigation>

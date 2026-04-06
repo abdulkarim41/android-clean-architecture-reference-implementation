@@ -61,6 +61,7 @@ dependencies {
     implementation(projects.featureCommon.profile)
 
     implementation(projects.featureProduct.products)
+    implementation(projects.featureCart.carts)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
