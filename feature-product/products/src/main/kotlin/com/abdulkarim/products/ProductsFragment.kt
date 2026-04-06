@@ -27,7 +27,12 @@ class ProductsFragment : BaseFragment<FragmentProductsBinding>() {
 
         adapter = ProductsAdapter(
             onItemClicked = {
-                navigate(uri = getString(R.string.deep_link_product_details_fragment).toUri())
+                navigate(
+                    uri = getString(
+                        R.string.deep_link_product_details_fragment_args,
+                        it.id
+                    ).toUri()
+                )
             }
         )
 

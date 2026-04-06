@@ -4,7 +4,7 @@ data class ProductApiResponse(
     val products : List<ProductItem>
 ){
     data class ProductItem(
-        val id: String?,
+        val id: Int?,
         val title: String?,
         val description: String?,
         val category: String?,

@@ -13,6 +13,10 @@
 
         <deepLink app:uri="@string/deep_link_product_details_fragment"/>
 
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+
     </fragment>
 
 </navigation>

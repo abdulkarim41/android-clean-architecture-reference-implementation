@@ -1,7 +1,7 @@
 package com.abdulkarim.entity.product
 
 data class ProductApiEntity(
-    val id: String,
+    val id: Int,
     val title: String,
     val description: String,
     val category: String,

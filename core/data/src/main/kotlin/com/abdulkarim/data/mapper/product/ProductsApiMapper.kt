@@ -11,7 +11,7 @@ class ProductsApiMapper @Inject constructor() :
     override fun mapFromApiResponse(type: ProductApiResponse): List<ProductApiEntity> {
         return type.products.map { item ->
             ProductApiEntity(
-                id = item.id ?: "",
+                id = item.id ?: -1,
                 title = item.title ?: "",
                 description = item.description ?: "",
                 category = item.category ?: "",
