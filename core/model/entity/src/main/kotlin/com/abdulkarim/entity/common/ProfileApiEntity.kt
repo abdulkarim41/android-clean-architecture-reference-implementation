@@ -1,11 +1,11 @@
 package com.abdulkarim.entity.common
 
 data class ProfileApiEntity(
-    val id: Int,
-    val username: String,
-    val email: String,
     val firstName: String,
     val lastName: String,
+    val maidenName: String,
+    val email: String,
+    val phone: String,
     val gender: String,
-    val image: String
+    val imageUrl: String,
 )

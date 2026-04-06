@@ -6,6 +6,8 @@ data class ProfileApiResponse(
     val email: String?,
     val firstName: String?,
     val lastName: String?,
+    val maidenName: String?,
     val gender: String?,
-    val image: String?
+    val image: String?,
+    val phone: String?,
 )

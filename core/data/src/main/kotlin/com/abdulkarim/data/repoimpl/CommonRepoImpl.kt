@@ -4,15 +4,18 @@ import com.abdulkarim.common.base.Result
 import com.abdulkarim.data.apiservice.CommonApiService
 import com.abdulkarim.data.mapper.common.ProfileApiMapper
 import com.abdulkarim.data.mapper.mapFromApiResponse
+import com.abdulkarim.data.utils.CacheProfile
 import com.abdulkarim.data.wrapper.NetworkBoundResource
 import com.abdulkarim.domain.repository.CommonRepository
 import com.abdulkarim.entity.common.ProfileApiEntity
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class CommonRepoImpl @Inject constructor(
     private val networkBoundResource: NetworkBoundResource,
     private val apiService: CommonApiService,
+    private val cacheProfile: CacheProfile,
     private val profileApiMapper: ProfileApiMapper,
 
     ) : CommonRepository {
@@ -23,7 +26,12 @@ class CommonRepoImpl @Inject constructor(
                 apiService.fetchProfileApi()
             },
             mapper = profileApiMapper
-        )
+        ).map {
+            if (it is Result.Success){
+                cacheProfile.cacheProfile(it.data)
+            }
+            it
+        }
     }
 
 }
