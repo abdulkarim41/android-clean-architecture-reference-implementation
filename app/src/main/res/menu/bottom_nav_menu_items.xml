@@ -4,16 +4,15 @@
     <item
         android:id="@+id/productsFragment"
         android:title="@string/label_products"
-        android:icon="@drawable/outline_home_app_logo_24"/>
+        android:icon="@drawable/ic_home"/>
 
     <item
-        android:id="@+id/nav_graph_notification"
-        android:title="@string/label_notification"
-        android:icon="@drawable/ic_notification_rounded"/>
+        android:title="@string/label_cart"
+        android:icon="@drawable/ic_cart"/>
 
     <item
         android:id="@+id/nav_graph_profile"
         android:title="@string/label_profile"
-        android:icon="@drawable/outline_person_24"/>
+        android:icon="@drawable/ic_person"/>
 
 </menu>
