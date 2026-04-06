@@ -22,6 +22,8 @@ class LoginViewModel @Inject constructor(
         }
     }
 
+    val loginIoError get() = postLoginApiUseCase.ioError.receiveAsFlow()
+
     private val _uiEvent = Channel<LoginUiEvent<Any>>()
     val uiEvent get() = _uiEvent.receiveAsFlow()
 
@@ -42,20 +44,18 @@ class LoginViewModel @Inject constructor(
             fetchProfileApiUseCase.execute().collect { result ->
                 when (result) {
                     is Result.Loading -> _uiEvent.send(LoginUiEvent.Loading)
-                    is Result.Success -> _uiEvent.send(LoginUiEvent.ProfileApiSuccess)
+                    is Result.Success -> _uiEvent.send(LoginUiEvent.ApiSuccess)
                     is Result.Error -> _uiEvent.send(LoginUiEvent.ApiError(message = result.message))
                 }
             }
         }
     }
-
 }
 
 sealed interface LoginUiEvent<out ResultType> {
     data object Loading : LoginUiEvent<Loading>
     data object ApiSuccess : LoginUiEvent<ApiSuccess>
     data class ApiError(val message: String) : LoginUiEvent<ApiError>
-    data object ProfileApiSuccess : LoginUiEvent<ProfileApiSuccess>
 }
 
 sealed interface LoginUiAction {

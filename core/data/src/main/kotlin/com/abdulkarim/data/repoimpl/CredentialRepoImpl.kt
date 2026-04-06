@@ -24,6 +24,9 @@ class CredentialRepoImpl @Inject constructor(
 ) : CredentialRepository {
 
     override suspend fun postLoginApi(params: PostLoginApiUseCase.Params): Flow<Result<LoginApiEntity>> {
+        // this is actual params for real user
+        val params = PostLoginApiUseCase.Params("emilys","emilyspass")
+
         return mapFromApiResponse(
             result = networkBoundResource.downloadData {
                 credentialApiService.postLoginApi(params)
