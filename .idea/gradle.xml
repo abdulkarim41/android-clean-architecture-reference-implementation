@@ -50,6 +50,7 @@
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/library/secure-storage" />
             <option value="$PROJECT_DIR$/library/sharedpref" />
+            <option value="$PROJECT_DIR$/library/viewstate" />
           </set>
         </option>
       </GradleProjectSettings>

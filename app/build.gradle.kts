@@ -53,6 +53,7 @@ dependencies {
 
     implementation(projects.library.secureStorage)
     implementation(projects.library.sharedpref)
+    implementation(projects.library.viewstate)
 
     implementation(projects.featureCredential.splash)
     implementation(projects.featureCredential.login)
