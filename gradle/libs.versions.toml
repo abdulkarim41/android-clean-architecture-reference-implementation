@@ -2,6 +2,7 @@
 
 # SDK
 compile-sdk = "36"
+lottie = "6.7.1"
 min-sdk = "26"
 
 # Gradle / Kotlin
@@ -103,6 +104,7 @@ androidx-navigation-hilt = {group = "androidx.hilt", name = "hilt-navigation-fra
 androidx-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 # ---------- Network ----------
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 retrofit-core = {group = "com.squareup.retrofit2", name = "retrofit", version.ref="retrofit"}
 retrofit-adapter-rx3 = {group = "com.squareup.retrofit2", name = "adapter-rxjava3", version.ref="retrofit"}
 retrofit-converter-gson = {group = "com.squareup.retrofit2", name = "converter-gson", version.ref="retrofit"}

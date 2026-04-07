@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentCl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Progress View -->
+        <include
+            android:id="@+id/incSimpleProgress"
+            layout="@layout/layout_simple_progress" />
+
+        <include
+            android:id="@+id/incLottieProgressLayout"
+            layout="@layout/layout_lottie_progress" />
+
+        <!-- Error View -->
+        <include
+            android:id="@+id/incSimpleErrorLayout"
+            layout="@layout/layout_simple_error" />
+
+        <include
+            android:id="@+id/incLottieErrorLayout"
+            layout="@layout/layout_lottie_error" />
+
+        <!-- Empty View -->
+        <include
+            android:id="@+id/incSimpleDataEmptyLayout"
+            layout="@layout/layout_simple_empty" />
+
+        <include
+            android:id="@+id/incLottieDataEmptyLayout"
+            layout="@layout/layout_empty_lottie" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>

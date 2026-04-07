@@ -4,7 +4,12 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.abdulkarim.viewstate.databinding.ViewStateLayoutBinding
+import com.abdulkarim.viewstate.databinding.ViewStateConstraintLayoutBinding
+import com.abdulkarim.viewstate.extension.dataEmptyLottieView
+import com.abdulkarim.viewstate.extension.networkErrorView
+import com.abdulkarim.viewstate.extension.progressBarLottieView
+import com.abdulkarim.viewstate.extension.progressbarView
+import com.abdulkarim.viewstate.utils.resetViewState
 
 class ViewStateLayout @JvmOverloads constructor(
     context: Context,
@@ -12,65 +17,43 @@ class ViewStateLayout @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    private val binding = ViewStateLayoutBinding.inflate(LayoutInflater.from(context), this)
+    private val binding =
+        ViewStateConstraintLayoutBinding.inflate(LayoutInflater.from(context), this)
 
-    // -------------------------
-    // Public API
-    // -------------------------
-
-    fun setState(
-        state: VslState,
-        onRetry: (() -> Unit)? = null
+    fun progressbarView(
+        progressStatus: Boolean,
+        progressBarColor: Int = ViewStateConfig.progressBarColor,
+        backgroundColor: Int = ViewStateConfig.progressbarViewBackgroundResources
     ) {
-        when (state) {
-            is VslState.Loading -> showLoading()
-            is VslState.Content -> showContent()
-            is VslState.Empty -> showEmpty(onRetry)
-            is VslState.Error -> showError(state.message, onRetry)
-        }
+        binding.progressbarView(progressStatus, progressBarColor, backgroundColor)
     }
 
-    fun showLoading() {
-        hideAll()
-        binding.progressBar.visibility = VISIBLE
-    }
-
-    fun showContent() {
-        hideAll()
-        binding.contentContainer.visibility = VISIBLE
-    }
-
-    fun showError(
-        message: String?,
-        onRetry: (() -> Unit)?
+    fun progressBarLottieView(
+        progressStatus: Boolean,
+        lottieRes: Int = ViewStateConfig.progressBarLottie,
+        backgroundColor: Int = ViewStateConfig.progressbarViewBackgroundResources
     ) {
-        hideAll()
-
-        binding.errorLayout.root.visibility = VISIBLE
-        binding.errorLayout.titleText.text = VslConfig.errorTitle
-        binding.errorLayout.messageText.text = message ?: VslConfig.errorMessage
-
-        binding.errorLayout.retryButton.setOnClickListener {
-            onRetry?.invoke()
-        }
+        binding.progressBarLottieView(progressStatus, lottieRes, backgroundColor)
     }
 
-    fun showEmpty(onAction: (() -> Unit)?) {
-        hideAll()
-
-        binding.emptyLayout.root.visibility = VISIBLE
-        binding.emptyLayout.titleText.text = VslConfig.emptyTitle
-        binding.emptyLayout.messageText.text = VslConfig.emptyMessage
-
-        binding.emptyLayout.actionButton.setOnClickListener {
-            onAction?.invoke()
-        }
+    fun networkErrorView(
+        title: String,
+        message: String,
+        buttonText: String,
+        refreshCallback: () -> Unit
+    ) {
+        binding.networkErrorView(title, message, buttonText, refreshCallback)
     }
 
-    private fun hideAll() {
-        binding.progressBar.visibility = GONE
-        binding.errorLayout.root.visibility = GONE
-        binding.emptyLayout.root.visibility = GONE
-        binding.contentContainer.visibility = GONE
+    fun dataEmptyLottieView(
+        message: String,
+        buttonText: String,
+        refreshCallback: () -> Unit
+    ) {
+        binding.dataEmptyLottieView(message, buttonText, refreshCallback)
+    }
+
+    fun reset() {
+        binding.resetViewState()
     }
 }
