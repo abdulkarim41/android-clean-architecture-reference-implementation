@@ -33,6 +33,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 add("implementation", project(":core:ui"))
                 add("implementation", project(":core:design-system"))
                 add("implementation", project(":library:sharedpref"))
+                add("implementation", project(":library:viewstate"))
 
                 add("implementation", libs.findLibrary("androidx.appcompat").get())
                 add("implementation", libs.findLibrary("androidx.core.ktx").get())
@@ -50,10 +51,6 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
 
                 add("implementation", libs.findLibrary("kotlinx.coroutines.android").get())
                 add("implementation", libs.findLibrary("gson").get())
-
-                //add("testImplementation", kotlin("test"))
-                //add("androidTestImplementation", kotlin("test"))
-                //add("implementation", libs.findLibrary("androidx.junit").get())
 
             }
         }
