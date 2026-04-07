@@ -61,7 +61,10 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
             is LoginUiEvent.Loading -> {
                 binding.loginBtn.setLoading(true)
             }
-            is LoginUiEvent.ApiError -> showMessage(event.message)
+            is LoginUiEvent.ApiError -> {
+                binding.loginBtn.setLoading(false)
+                showMessage(event.message)
+            }
             is LoginUiEvent.ApiSuccess -> {
                 binding.loginBtn.setLoading(false)
                 navigate(
