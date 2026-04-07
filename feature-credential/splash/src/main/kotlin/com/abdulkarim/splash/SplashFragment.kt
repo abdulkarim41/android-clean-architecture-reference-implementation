@@ -48,7 +48,14 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
             }
 
             is SplashUiState.ApiError -> {
-                // show error
+                binding.viewState.networkErrorView(
+                    title = "Opps",
+                    message = state.message,
+                    buttonText = "Refresh",
+                    refreshCallback = {
+                        viewModel.action(SplashUiAction.FetchProfileApiAction)
+                    }
+                )
             }
         }
     }
