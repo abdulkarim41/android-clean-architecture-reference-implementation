@@ -4,6 +4,10 @@ plugins {
 
 android {
     namespace = "com.abdulkarim.customview"
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
