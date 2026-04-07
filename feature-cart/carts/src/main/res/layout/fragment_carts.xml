@@ -42,4 +42,22 @@
         android:textColor="@color/white"
         android:padding="@dimen/padding_7sdp"/>
 
+
+    <com.abdulkarim.customview.layout.CustomLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_14sdp"
+        android:layout_marginTop="@dimen/margin_14sdp"
+        app:cornerRadius="@dimen/radius_7sdp"
+        app:backgroundColor="@color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:textColor="@color/white"/>
+
+    </com.abdulkarim.customview.layout.CustomLinearLayout>
+
 </LinearLayout>
