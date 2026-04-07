@@ -1,7 +1,6 @@
 package com.abdulkarim.productdetails
 
 import android.os.Bundle
-import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.abdulkarim.common.base.BaseFragment
@@ -33,12 +32,21 @@ class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
 
     private fun handleUiState(state: ProductDetailsUiState<Any>) {
         when (state) {
-            is ProductDetailsUiState.Loading -> {}
+            is ProductDetailsUiState.Loading -> {
+                binding.viewState.progressbarView(state.isLoading)
+            }
             is ProductDetailsUiState.ProductDetails -> {
                 dataBindWithUI(state.data)
             }
             is ProductDetailsUiState.ApiError -> {
-
+                binding.viewState.networkErrorView(
+                    title = "Opps",
+                    message = state.message,
+                    buttonText = "Refresh",
+                    refreshCallback = {
+                        viewmodel.action(ProductDetailsUiAction.FetchProductDetailsApi(arg.productId))
+                    }
+                )
             }
         }
     }
