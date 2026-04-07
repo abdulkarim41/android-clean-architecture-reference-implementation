@@ -51,23 +51,33 @@ class ProductsFragment : BaseFragment<FragmentProductsBinding>() {
     private fun handleUiState(state: ProductsUiState<Any>) {
         when (state) {
             is ProductsUiState.Loading -> {
-                //binding.viewState.showLoading()
+                binding.viewState.progressbarView(state.isLoading)
             }
             is ProductsUiState.Products -> {
-                //binding.viewState.showSuccess()
                 adapter.submitList(state.data)
             }
             is ProductsUiState.ApiError -> {
-//                binding.viewState.showError(
-//                    message = state.message,
-//                    retryAction = {
-//                        viewModel.action(ProductsUiAction.FetchAvailableProductsApi)
-//                    }
-//                )
+                binding.viewState.networkErrorView(
+                    title = "Opps",
+                    message = state.message,
+                    buttonText = "Refresh",
+                    refreshCallback = {
+                        viewModel.action(ProductsUiAction.FetchAvailableProductsApi)
+                    }
+                )
             }
-
-            ProductsUiState.EmptyProduct -> {}
-            is ProductsUiState.LoadingMore -> binding.progressbar.isVisible = state.isLoading
+            is ProductsUiState.EmptyProduct -> {
+                binding.viewState.dataEmptyLottieView(
+                    message = "No Data Found",
+                    buttonText = "Refresh",
+                    refreshCallback = {
+                        viewModel.action(ProductsUiAction.FetchAvailableProductsApi)
+                    }
+                )
+            }
+            is ProductsUiState.LoadingMore -> {
+                binding.progressbar.isVisible = state.isLoading
+            }
         }
     }
 
