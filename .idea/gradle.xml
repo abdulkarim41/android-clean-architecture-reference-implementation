@@ -48,6 +48,7 @@
             <option value="$PROJECT_DIR$/feature-product/product-details" />
             <option value="$PROJECT_DIR$/feature-product/products" />
             <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/library/customview" />
             <option value="$PROJECT_DIR$/library/secure-storage" />
             <option value="$PROJECT_DIR$/library/sharedpref" />
             <option value="$PROJECT_DIR$/library/viewstate" />
