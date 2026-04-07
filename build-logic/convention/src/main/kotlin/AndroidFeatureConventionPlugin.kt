@@ -33,6 +33,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 add("implementation", project(":core:ui"))
                 add("implementation", project(":core:design-system"))
                 add("implementation", project(":library:sharedpref"))
+                add("implementation", project(":library:customview"))
                 add("implementation", project(":library:viewstate"))
 
                 add("implementation", libs.findLibrary("androidx.appcompat").get())
