@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="@dimen/_14sdp"
     android:visibility="gone">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -19,7 +19,7 @@
         android:id="@+id/tvMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No Data Found"
+        android:text="@string/message_no_data_found"
         android:textSize="16sp"
         android:layout_marginTop="12dp" />
 
@@ -27,7 +27,7 @@
         android:id="@+id/btnRetry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retry"
-        android:layout_marginTop="16dp" />
+        android:text="@string/action_refresh"
+        android:layout_marginTop="@dimen/_14sdp" />
 
 </LinearLayout>

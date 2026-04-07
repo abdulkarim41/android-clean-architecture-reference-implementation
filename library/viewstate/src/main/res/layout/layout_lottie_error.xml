@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:lottie="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/lottieErrorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:visibility="gone"
-    android:padding="24dp">
+    android:padding="@dimen/_14sdp"
+    android:visibility="gone">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/networkErrorIv"
@@ -17,25 +18,26 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        android:text="Oops!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginTop="12dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        tools:text="Oops!" />
 
     <TextView
         android:id="@+id/tvMessage"
-        android:text="Something went wrong"
-        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="Something went wrong" />
 
     <Button
         android:id="@+id/btnRetry"
-        android:text="Retry"
-        android:layout_marginTop="16dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:text="@string/action_refresh"
+        android:textAllCaps="false" />
 
 </LinearLayout>

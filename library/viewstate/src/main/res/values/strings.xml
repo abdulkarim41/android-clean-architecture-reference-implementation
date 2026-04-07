@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_refresh">Refresh</string>
+    <string name="message_no_data_found">No Data Found</string>
+    <string name="message_image_content_description">Image Content Description</string>
+</resources>
