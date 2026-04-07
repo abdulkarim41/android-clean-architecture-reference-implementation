@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_14sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.abdulkarim.customview.button.LoadingButton
@@ -12,10 +14,50 @@
         android:text="Carts Fragment"
         android:padding="@dimen/padding_14sdp"
         android:backgroundTint="@color/colorPrimary"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:textColor="@color/white"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.abdulkarim.customview.textview.TextRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regular Text"
+        app:tvBackgroundColor="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:padding="@dimen/padding_7sdp"
+        app:tvCornerRadius="@dimen/radius_7sdp"/>
+
+    <com.abdulkarim.customview.textview.TextMedium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        app:tvBackgroundColor="@color/green"
+        android:textColor="@color/white"
+        android:padding="@dimen/padding_7sdp"
+        app:tvCornerRadius="@dimen/radius_7sdp"/>
+
+    <com.abdulkarim.customview.textview.TextBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bold Text"
+        app:tvBackgroundColor="@color/purple"
+        android:textColor="@color/white"
+        android:padding="@dimen/padding_7sdp"/>
+
+
+    <com.abdulkarim.customview.layout.CustomLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_14sdp"
+        android:layout_marginTop="@dimen/margin_14sdp"
+        app:cornerRadius="@dimen/radius_7sdp"
+        app:backgroundColor="@color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:textColor="@color/white"/>
+
+    </com.abdulkarim.customview.layout.CustomLinearLayout>
+
+</LinearLayout>

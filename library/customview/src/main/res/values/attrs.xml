@@ -5,4 +5,27 @@
         <attr name="textAllCaps" format="boolean" />
         <attr name="loading" format="boolean"/>
     </declare-styleable>
+
+    <declare-styleable name="BaseTextView">
+
+        <!-- Shape -->
+        <attr name="tvCornerRadius" format="dimension"/>
+        <attr name="tvBackgroundColor" format="color"/>
+
+        <!-- Stroke -->
+        <attr name="tvStrokeColor" format="color"/>
+        <attr name="tvStrokeWidth" format="dimension"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomLayout">
+
+        <attr name="cornerRadius" format="dimension"/>
+        <attr name="strokeColor" format="color"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="backgroundColor" format="color"/>
+
+    </declare-styleable>
+
+
 </resources>
