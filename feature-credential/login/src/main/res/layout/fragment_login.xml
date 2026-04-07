@@ -83,12 +83,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordTIL" />
 
-    <Button
+    <com.abdulkarim.customview.button.LoadingButton
         android:id="@+id/loginBtn"
         style="@style/DS.Button.Filled.Rounded"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"
         android:text="@string/action_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

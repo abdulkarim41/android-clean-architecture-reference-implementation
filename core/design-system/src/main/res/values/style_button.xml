@@ -2,7 +2,7 @@
 <resources>
 
     <style name="DS.Button.Filled.Rounded" parent="Widget.MaterialComponents.Button">
-        <item name="cornerRadius">@dimen/_25sdp</item>
+        <item name="cornerRadius">@dimen/_7sdp</item>
         <item name="cornerFamily">rounded</item>
         <item name="android:textAllCaps">false</item>
     </style>

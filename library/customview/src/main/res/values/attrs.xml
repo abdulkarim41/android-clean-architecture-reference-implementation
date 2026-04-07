@@ -3,5 +3,6 @@
     <declare-styleable name="LoadingButton">
         <attr name="text" format="string" />
         <attr name="textAllCaps" format="boolean" />
+        <attr name="loading" format="boolean"/>
     </declare-styleable>
 </resources>

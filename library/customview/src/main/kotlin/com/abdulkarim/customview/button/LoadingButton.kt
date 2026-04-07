@@ -2,54 +2,46 @@ package com.abdulkarim.customview.button
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.LayoutInflater
-import android.widget.FrameLayout
 import androidx.core.content.withStyledAttributes
 import com.abdulkarim.customview.R
-import com.abdulkarim.customview.databinding.ViewLoadingButtonBinding
+import com.google.android.material.button.MaterialButton
 
 class LoadingButton @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null
-) : FrameLayout(context, attrs) {
+) : MaterialButton(context, attrs) {
 
-    var binding: ViewLoadingButtonBinding = ViewLoadingButtonBinding.inflate(
-        LayoutInflater.from(context),
-        this,
-        true
-        )
+    private var originalText: CharSequence? = null
 
     init {
-        attrs?.let {
-            context.withStyledAttributes(it, R.styleable.LoadingButton) {
+        context.withStyledAttributes(attrs, R.styleable.LoadingButton) {
 
-                val text = getString(R.styleable.LoadingButton_text)
-                binding.button.text = text ?: "Button"
+            // ONLY handle custom attributes
+            val allCaps = getBoolean(R.styleable.LoadingButton_textAllCaps, false)
+            isAllCaps = allCaps
 
-                val allCaps = getBoolean(R.styleable.LoadingButton_textAllCaps, false)
-                binding.button.isAllCaps = allCaps
-
-            }
+            val loading = getBoolean(R.styleable.LoadingButton_loading, false)
+            post {
+                originalText = text
+                setLoading(loading)
+            } // important (wait until text is set)
         }
     }
 
     fun setLoading(isLoading: Boolean) {
-        binding.button.isEnabled = !isLoading
-
         if (isLoading) {
-            binding.progressBar.visibility = VISIBLE
-            binding.button.alpha = 0.6f
+            if (originalText == null) {
+                originalText = text
+            }
+
+            text = "Loading..."
+            isEnabled = false
+            alpha = 0.6f
+
         } else {
-            binding.progressBar.visibility = GONE
-            binding.button.alpha = 1f
+            text = originalText
+            isEnabled = true
+            alpha = 1f
         }
-    }
-
-    fun setText(text: String) {
-        binding.button.text = text
-    }
-
-    override fun setOnClickListener(listener: OnClickListener?) {
-        binding.button.setOnClickListener(listener)
     }
 }

@@ -5,11 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.abdulkarim.customview.button.LoadingButton
+        style="@style/DS.Button.Filled.Rounded"
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:text="Carts Fragment"
+        android:text="Carts Fragment"
         android:padding="@dimen/padding_14sdp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

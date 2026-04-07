@@ -58,9 +58,12 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
     private fun handleUiEvent(event: LoginUiEvent<Any>) {
 
         when (event) {
-            is LoginUiEvent.Loading -> {}
+            is LoginUiEvent.Loading -> {
+                binding.loginBtn.setLoading(true)
+            }
             is LoginUiEvent.ApiError -> showMessage(event.message)
             is LoginUiEvent.ApiSuccess -> {
+                binding.loginBtn.setLoading(false)
                 navigate(
                     uri = getString(R.string.deep_link_products_fragment).toUri(),
                     popupToId = R.id.loginFragment,
