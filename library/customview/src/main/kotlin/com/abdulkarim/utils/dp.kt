@@ -1,4 +1,4 @@
-package com.abdulkarim.customview.utils
+package com.abdulkarim.utils
 
 import android.content.Context
 

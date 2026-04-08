@@ -1,4 +1,4 @@
-package com.abdulkarim.customview.layout
+package com.abdulkarim.layout
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -11,9 +11,9 @@ import androidx.annotation.ColorInt
 import androidx.annotation.Dimension
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.abdulkarim.R
-import com.abdulkarim.customview.utils.GradientOrientation
-import com.abdulkarim.customview.utils.Shape
-import com.abdulkarim.customview.utils.dp
+import com.abdulkarim.utils.GradientOrientation
+import com.abdulkarim.utils.Shape
+import com.abdulkarim.utils.dp
 import androidx.core.content.withStyledAttributes
 
 class CustomConstraintLayout : ConstraintLayout {

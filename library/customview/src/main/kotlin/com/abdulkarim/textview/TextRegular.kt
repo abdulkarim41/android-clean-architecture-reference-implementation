@@ -1,4 +1,4 @@
-package com.abdulkarim.customview.textview
+package com.abdulkarim.textview
 
 import android.content.Context
 import android.graphics.Typeface

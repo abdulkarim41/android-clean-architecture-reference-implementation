@@ -1,4 +1,4 @@
-package com.abdulkarim.customview.button
+package com.abdulkarim.button
 
 import android.content.Context
 import android.util.AttributeSet

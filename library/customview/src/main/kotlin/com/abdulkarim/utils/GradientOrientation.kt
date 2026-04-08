@@ -1,4 +1,4 @@
-package com.abdulkarim.customview.utils
+package com.abdulkarim.utils
 
 enum class GradientOrientation {
     TOP_BOTTOM,

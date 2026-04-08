@@ -6,7 +6,7 @@
     android:padding="@dimen/padding_14sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.abdulkarim.customview.button.LoadingButton
+    <com.abdulkarim.button.LoadingButton
         style="@style/DS.Button.Filled.Rounded"
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
@@ -16,7 +16,7 @@
         android:backgroundTint="@color/colorPrimary"
         android:textColor="@color/white"/>
 
-    <com.abdulkarim.customview.textview.TextRegular
+    <com.abdulkarim.textview.TextRegular
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Regular Text"
@@ -25,7 +25,7 @@
         android:padding="@dimen/padding_7sdp"
         app:tvCornerRadius="@dimen/radius_7sdp"/>
 
-    <com.abdulkarim.customview.textview.TextMedium
+    <com.abdulkarim.textview.TextMedium
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Medium Text"
@@ -34,7 +34,7 @@
         android:padding="@dimen/padding_7sdp"
         app:tvCornerRadius="@dimen/radius_7sdp"/>
 
-    <com.abdulkarim.customview.textview.TextBold
+    <com.abdulkarim.textview.TextBold
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bold Text"
@@ -43,7 +43,7 @@
         android:padding="@dimen/padding_7sdp"/>
 
 
-    <com.abdulkarim.customview.layout.CustomLinearLayout
+    <com.abdulkarim.layout.CustomLinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -60,9 +60,9 @@
             android:layout_height="wrap_content"
             android:text="Custom LinearLayout" />
 
-    </com.abdulkarim.customview.layout.CustomLinearLayout>
+    </com.abdulkarim.layout.CustomLinearLayout>
 
-    <com.abdulkarim.customview.layout.CustomConstraintLayout
+    <com.abdulkarim.layout.CustomConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_14sdp"
@@ -79,6 +79,6 @@
             android:textColor="@color/white"
             />
 
-    </com.abdulkarim.customview.layout.CustomConstraintLayout>
+    </com.abdulkarim.layout.CustomConstraintLayout>
 
 </LinearLayout>
