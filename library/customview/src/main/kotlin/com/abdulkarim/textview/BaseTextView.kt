@@ -1,11 +1,11 @@
-package com.abdulkarim.customview.textview
+package com.abdulkarim.textview
 
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.withStyledAttributes
-import com.abdulkarim.customview.R
+import com.abdulkarim.R
 
 abstract class BaseTextView @JvmOverloads constructor(
     context: Context,

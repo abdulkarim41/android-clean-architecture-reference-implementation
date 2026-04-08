@@ -1,9 +1,9 @@
-package com.abdulkarim.customview.button
+package com.abdulkarim.button
 
 import android.content.Context
 import android.util.AttributeSet
 import androidx.core.content.withStyledAttributes
-import com.abdulkarim.customview.R
+import com.abdulkarim.R
 import com.google.android.material.button.MaterialButton
 
 class LoadingButton @JvmOverloads constructor(

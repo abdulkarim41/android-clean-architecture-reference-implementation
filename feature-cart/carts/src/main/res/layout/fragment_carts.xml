@@ -6,7 +6,7 @@
     android:padding="@dimen/padding_14sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.abdulkarim.customview.button.LoadingButton
+    <com.abdulkarim.button.LoadingButton
         style="@style/DS.Button.Filled.Rounded"
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
@@ -16,7 +16,7 @@
         android:backgroundTint="@color/colorPrimary"
         android:textColor="@color/white"/>
 
-    <com.abdulkarim.customview.textview.TextRegular
+    <com.abdulkarim.textview.TextRegular
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Regular Text"
@@ -25,7 +25,7 @@
         android:padding="@dimen/padding_7sdp"
         app:tvCornerRadius="@dimen/radius_7sdp"/>
 
-    <com.abdulkarim.customview.textview.TextMedium
+    <com.abdulkarim.textview.TextMedium
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Medium Text"
@@ -34,7 +34,7 @@
         android:padding="@dimen/padding_7sdp"
         app:tvCornerRadius="@dimen/radius_7sdp"/>
 
-    <com.abdulkarim.customview.textview.TextBold
+    <com.abdulkarim.textview.TextBold
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bold Text"
@@ -43,21 +43,42 @@
         android:padding="@dimen/padding_7sdp"/>
 
 
-    <com.abdulkarim.customview.layout.CustomLinearLayout
+    <com.abdulkarim.layout.CustomLinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="@dimen/padding_14sdp"
         android:layout_marginTop="@dimen/margin_14sdp"
-        app:cornerRadius="@dimen/radius_7sdp"
-        app:backgroundColor="@color/black">
+        app:ll_background_shape="stroke"
+        app:ll_stroke_width="@dimen/_1sdp"
+        app:ll_corner_radius="@dimen/radius_7sdp"
+        app:ll_stroke_color="@color/colorPrimary"
+        android:background="@color/green">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello"
-            android:textColor="@color/white"/>
+            android:text="Custom LinearLayout" />
 
-    </com.abdulkarim.customview.layout.CustomLinearLayout>
+    </com.abdulkarim.layout.CustomLinearLayout>
+
+    <com.abdulkarim.layout.CustomConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_14sdp"
+        app:cl_background_shape="rectangle"
+        android:padding="@dimen/padding_14sdp"
+        app:cl_topLeft_corner_radius="@dimen/radius_7sdp"
+        app:cl_bottomRight_corner_radius="@dimen/radius_7sdp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom ConstrantLayout"
+            android:textColor="@color/white"
+            />
+
+    </com.abdulkarim.layout.CustomConstraintLayout>
 
 </LinearLayout>

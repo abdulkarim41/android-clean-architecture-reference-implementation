@@ -3,11 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.abdulkarim.customview"
-
-    buildFeatures {
-        viewBinding = true
-    }
+    namespace = "com.abdulkarim"
 }
 
 dependencies {
