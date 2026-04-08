@@ -49,15 +49,36 @@
         android:orientation="vertical"
         android:padding="@dimen/padding_14sdp"
         android:layout_marginTop="@dimen/margin_14sdp"
-        app:cornerRadius="@dimen/radius_7sdp"
-        app:backgroundColor="@color/black">
+        app:ll_background_shape="stroke"
+        app:ll_stroke_width="@dimen/_1sdp"
+        app:ll_corner_radius="@dimen/radius_7sdp"
+        app:ll_stroke_color="@color/colorPrimary"
+        android:background="@color/green">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello"
-            android:textColor="@color/white"/>
+            android:text="Custom LinearLayout" />
 
     </com.abdulkarim.customview.layout.CustomLinearLayout>
+
+    <com.abdulkarim.customview.layout.CustomConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_14sdp"
+        app:cl_background_shape="rectangle"
+        android:padding="@dimen/padding_14sdp"
+        app:cl_topLeft_corner_radius="@dimen/radius_7sdp"
+        app:cl_bottomRight_corner_radius="@dimen/radius_7sdp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom ConstrantLayout"
+            android:textColor="@color/white"
+            />
+
+    </com.abdulkarim.customview.layout.CustomConstraintLayout>
 
 </LinearLayout>

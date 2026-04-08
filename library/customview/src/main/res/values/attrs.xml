@@ -27,5 +27,85 @@
 
     </declare-styleable>
 
+    <declare-styleable name="CustomLinearLayout">
+
+        <attr name="ll_corner_radius" format="dimension"/>
+
+        <attr name="ll_topLeft_corner_radius" format="dimension"/>
+        <attr name="ll_topRight_corner_radius" format="dimension"/>
+        <attr name="ll_bottomLeft_corner_radius" format="dimension"/>
+        <attr name="ll_bottomRight_corner_radius" format="dimension"/>
+
+        <attr name="ll_background_shape">
+            <enum name="rectangle" value="0"/>
+            <enum name="oval" value="1"/>
+            <enum name="stroke" value="2"/>
+            <enum name="stroke_circle" value="3"/>
+        </attr>
+
+        <attr name="ll_stroke_color" format="color"/>
+        <attr name="ll_stroke_width" format="dimension"/>
+
+        <attr name="ll_disable_bg_color" format="color"/>
+
+        <attr name="ll_gradient_orientation">
+            <enum name="top_bottom" value="0"/>
+            <enum name="bottom_top" value="1"/>
+            <enum name="left_right" value="2"/>
+            <enum name="right_left" value="3"/>
+            <enum name="tl_br" value="4"/>
+            <enum name="tr_bl" value="5"/>
+            <enum name="bl_tr" value="6"/>
+            <enum name="br_tl" value="7"/>
+        </attr>
+
+        <attr name="ll_gradient_top_color" format="color"/>
+        <attr name="ll_gradient_middle_color" format="color"/>
+        <attr name="ll_gradient_bottom_color" format="color"/>
+
+        <attr name="ll_ripple_color" format="color"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomConstraintLayout">
+
+        <attr name="cl_corner_radius" format="dimension"/>
+
+        <attr name="cl_topLeft_corner_radius" format="dimension"/>
+        <attr name="cl_topRight_corner_radius" format="dimension"/>
+        <attr name="cl_bottomLeft_corner_radius" format="dimension"/>
+        <attr name="cl_bottomRight_corner_radius" format="dimension"/>
+
+        <attr name="cl_background_shape">
+            <enum name="rectangle" value="0"/>
+            <enum name="oval" value="1"/>
+            <enum name="stroke" value="2"/>
+            <enum name="stroke_circle" value="3"/>
+        </attr>
+
+        <attr name="cl_stroke_color" format="color"/>
+        <attr name="cl_stroke_width" format="dimension"/>
+
+        <attr name="cl_disable_bg_color" format="color"/>
+
+        <attr name="cl_gradient_orientation">
+            <enum name="top_bottom" value="0"/>
+            <enum name="bottom_top" value="1"/>
+            <enum name="left_right" value="2"/>
+            <enum name="right_left" value="3"/>
+            <enum name="tl_br" value="4"/>
+            <enum name="tr_bl" value="5"/>
+            <enum name="bl_tr" value="6"/>
+            <enum name="br_tl" value="7"/>
+        </attr>
+
+        <attr name="cl_gradient_top_color" format="color"/>
+        <attr name="cl_gradient_middle_color" format="color"/>
+        <attr name="cl_gradient_bottom_color" format="color"/>
+
+        <attr name="cl_ripple_color" format="color"/>
+
+    </declare-styleable>
+
 
 </resources>
